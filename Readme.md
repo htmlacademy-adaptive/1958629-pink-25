@@ -1,7 +1,7 @@
 # Личный проект «Пинк» 
 
 * Студент: [Влас Горбачёв](https://up.htmlacademy.ru/adaptive/25/user/1958629).
-* Наставник: `Неизвестно`.
+* Наставник: [Андрей Ефимов](https://up.htmlacademy.ru/profession/frontender/13/htmlcss/33/user/367335).
 
 ---
 
