@@ -5,27 +5,38 @@ n{% extends "_layout.njk" %}
 {% block main %}
   <header class="promo page-main__promo">
     <h1 class="visually-hidden">
-      Pink
+      Pink.
     </h1>
 
-    <img class="promo__img-phone" src="" alt="Рука с телефоном.">
+    <img class="promo__img-phone" alt="Рука с телефоном.">
 
-    <button class="promo__button-download">
+    <a class="promo__button-download" href="https://www.apple.com/ru/app-store/">
       Скачать приложение
-    </button>
+    </a>
 
-    <ul class="promo__platforms-list platforms-list">
-      <li class="platforms-list__platform-item platform-item">
-         <!--что то картинка не появляется вроде все то делаю-->
-        <img class="platform-item__logo apple" src="source\img\logo-apple.svg" alt="Для apple." width="47" height="56">
+    <ul class="platforms-list promo__platforms-list">
+      <li class="platforms-list__item">
+        <a class="platforms-list__link platforms-list__link--apple" href="https://www.apple.com/ru/app-store/">
+          <span class="visually-hidden">
+            Логотип Apple.
+          </span>
+        </a>
       </li>
 
-      <li class="platforms-list__platform-item">
-        <img class="platform-item__logo android" src="source\img\logo-android.svg" alt="Для android.">
+      <li class="platforms-list__item">
+        <a class="platforms-list__link platforms-list__link--android" href="https://play.google.com">
+          <span class="visually-hidden">
+            Логотип Android.
+          </span>
+        </a>
       </li>
 
-      <li class="platforms-list__platform-item">
-        <img class="platform-item__logo microsoft" src="source\img\logo-microsoft.svg" alt="Для microsoft.">
+      <li class="platforms-list__item">
+        <a class="platforms-list__link platforms-list__link--microsoft" href="https://www.microsoft.com/">
+          <span class="visually-hidden">
+            Логотип Microsoft.
+          </span>
+        </a>
       </li>
     </ul>
 
@@ -36,7 +47,7 @@ n{% extends "_layout.njk" %}
 
   <section class="features page-main__features">
     <h2 class="visually-hidden">
-      Особенности
+      Особенности.
     </h2>
 
     <b class="features__lead">
@@ -51,7 +62,6 @@ n{% extends "_layout.njk" %}
       <dt class="features__item">
         Поднимает настроение
       </dt>
-
       <dd class="features__description">
         Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
       </dd>
@@ -59,23 +69,18 @@ n{% extends "_layout.njk" %}
       <dt class="features__item">
         Меняет мир вокруг
       </dt>
-
       <dd class="features__description">
         Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
       </dd>
 
       <dt class="features__item">
-        Заводит новых друзей
+         Заводит новых друзей              {#к этому пункту добавится декорация с телефоном #}
       </dt>
-
       <dd class="features__description">
         Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
       </dd>
     </dl>
   </section>
-
- <!--забыл как обьединять картинки что бы получилась одна ?-->
-  <img src="" alt="Телефон с приветствием.">
 
   <section class="reviews-section">
     <h2 class="reviews-section__caption">
@@ -86,51 +91,67 @@ n{% extends "_layout.njk" %}
       «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
     </p>
 
-    <button class="reviews-section__button reviews-section__button--primary">
+    <div class="togglers reviews__togglers">
+      <a class="togglers__button togglers__button--current" href="#!">
+        <span class="visually-hidden">
+          Переключение отзыва.
+        </span>
+      </a>
 
-    </button>
+      <a class="togglers__button" href="#!">
+        <span class="visually-hidden">
+          Переключение отзыва.
+        </span>
+      </a>
 
-    <button class="reviews-section__button">
-
-    </button>
-
-    <button class="reviews-section__button">
-
-    </button>
+      <a class="togglers__button" href="#!">
+        <span class="visually-hidden">
+          Переключение отзыва.
+        </span>
+      </a>
+    </div>
   </section>
 
   <section class="tariffs page-main__tariffs">
-    <h2 class="visually-hidden">Тарифы</h2>
+    <h2 class="visually-hidden">
+      Тарифы.
+    </h2>
 
     <table class="tariffs__table">
-      <thead class="">
-        <tr class="tariffs__names">
-          <th class="hit tariffs__name">
-            Стандарт
+      <tr class="tariffs__names">
+        <th class="hit tariffs__name">
+          Стандарт
 
-            <span class="hit__content">
-              Хит
-            </span>
+          <span class="hit__content">
+            Хит
+          </span>
 
-            <p class="tariffs__price">
-              3,99 USD
-            </p>
-          </th>
-        </tr>
-      </thead>
+          <p class="tariffs__price">
+            3,99 USD
+          </p>
+        </th>
+      </tr>
     </table>
 
-    <button class="reviews-section__button">
+    <div class="togglers tariffs__togglers">
+      <a class="togglers__button" href="#!">
+        <span class="visually-hidden">
+          Вариант подписки.
+        </span>
+      </a>
 
-    </button>
+      <a class="togglers__button togglers__button--current" href="#!">
+        <span class="visually-hidden">
+          Вариант подписки.
+        </span>
+      </a>
 
-    <button class="reviews-section__button reviews-section__button--primary">
-
-    </button>
-
-    <button class="reviews-section__button">
-
-    </button>
+      <a class="togglers__button" href="#!">
+        <span class="visually-hidden">
+          Вариант подписки.
+        </span>
+      </a>
+    </div>
   </section>
 
   <footer class="contacts page-main__footer">
@@ -143,9 +164,8 @@ n{% extends "_layout.njk" %}
       <dt class="contacts-list__item">
         Звоните:
       </dt>
-
       <dd class="contacts-list__description">
-        <a class="contacts-list_link" href="tel:+78125556666">
+        <a class="contacts-list__link" href="tel:+78125556666">
           +7 (812) 555-66-66
         </a>
       </dd>
@@ -153,21 +173,18 @@ n{% extends "_layout.njk" %}
       <dt class="contacts-list__item">
         Пишите:
       </dt>
-
       <dd class="contacts-list__description">
-        <a class="contacts-list_link" href="mailto:mail@htmlacademy.ru">
-         mail@htmlacademy.ru
+        <a class="contacts-list__link" href="mailto:mail@htmlacademy.ru">
+          mail@htmlacademy.ru
         </a>
       </dd>
 
       <dt class="contacts-list__item">
         Приезжайте в гости:
       </dt>
-
       <dd class="contacts-list__description">
-        <a class="contacts-list_link" href="#!">
-          ул. Большая
-          Конюшенная, 19/8
+        <a class="contacts-list__link" href="#!">
+          ул. Большая Конюшенная, 19/8
         </a>
       </dd>
     </dl>
