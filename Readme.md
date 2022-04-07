@@ -3,7 +3,7 @@
 * Студент: [Влас Горбачёв](https://up.htmlacademy.ru/adaptive/25/user/1958629).
 * Наставник: [Андрей Ефимов](https://up.htmlacademy.ru/profession/frontender/13/htmlcss/33/user/367335).
 
----
+--
 
 **Обратите внимание, что папка с вашими исходными файлами — `source/`.**
 
