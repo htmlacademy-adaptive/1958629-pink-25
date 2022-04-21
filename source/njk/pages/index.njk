@@ -4,16 +4,17 @@
 
 {% block main %}
   <header class="promo page-main__promo">
-    <h1 class="visually-hidden">
-      Pink.
-    </h1>
+    <div class="promo__bg-block">
+      <h1 class="visually-hidden">
+        Pink.
+      </h1>
 
-    <b class="promo__lead">
-      Взгляните на жизнь иначе!
-    </b>
+      <b class="promo__lead">
+        Взгляните на жизнь иначе!
+      </b>
 
-    <img class="promo__img-phone" src="img/hand-phone.jpg" alt="Телефон с запущенным приложением Pink в руке.">
-
+      <img class="promo__img-phone" src="img/hand-phone.png" alt="Телефон с запущенным приложением Pink в руке.">
+    </div>
     <a class="promo__button-download" href="https://www.apple.com/ru/app-store/">
       Скачать приложение
     </a>
@@ -63,73 +64,78 @@
     </b>
 
     <dl class="features__list">
-      <dt class="features__item">
-        Поднимает настроение
-      </dt>
-      <dd class="features__description">
-        Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
-      </dd>
+      <div class="features__item features__item--1">
+        <dt class="features__title">
+          Поднимает настроение
+        </dt>
+        <dd class="features__description">
+          Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
+        </dd>
+      </div>
 
-      <dt class="features__item">
-        Меняет мир вокруг
-      </dt>
-      <dd class="features__description">
-        Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
-      </dd>
+      <div class="features__item features__item--2">
+        <dt class="features__title">
+          Меняет мир вокруг
+        </dt>
+        <dd class="features__description">
+          Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
+        </dd>
+      </div>
 
-      {# К этому пункту добавится декорация с телефоном #}
-      <dt class="features__item">
-        Заводит новых друзей
-      </dt>
-      <dd class="features__description">
-        Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
-      </dd>
+      <div class="features__item features__item--3">
+        <dt class="features__title">
+          Заводит новых друзей
+        </dt>
+        <dd class="features__description features__description--phone">
+          Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
+        </dd>
+      </div>
     </dl>
   </section>
 
 
-  <section class="reviews-section page-main__reviews">
+  <section class="reviews page-main__reviews">
     <h2 class="visually-hidden">
       Отзывы.
     </h2>
 
-    <ul class="reviews-section__list">
-      <li class="reviews-section__item">
-        <blockquote class="reviews-section__quote">
-          <cite class="reviews-section__author">
+    <ul class="reviews__list">
+      <li class="reviews__item">
+        <blockquote class="reviews__quote">
+          <cite class="reviews__author">
             Николай Петров
           </cite>
 
-          <p class="reviews-section__description">
+          <p class="reviews__description">
             «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
           </p>
         </blockquote>
       </li>
     </ul>
 
-    <ul class="togglers reviews-section__togglers-list">
+    <ul class="togglers reviews__togglers-list">
       <li class="togglers__item">
-        <a class="togglers__button togglers__button--current" href="#!">
+        <button class="togglers__button togglers__button--current" href="#!">
           <span class="visually-hidden">
             К отзыву 1.
           </span>
-        </a>
+        </button>
       </li>
 
       <li class="togglers__item">
-        <a class="togglers__button" href="#!">
+        <button class="togglers__button" href="#!">
           <span class="visually-hidden">
             К отзыву 2.
           </span>
-        </a>
+        </button>
       </li>
 
       <li class="togglers__item">
-        <a class="togglers__button" href="#!">
+        <button class="togglers__button" href="#!">
           <span class="visually-hidden">
             К отзыву 3.
           </span>
-        </a>
+        </button>
       </li>
     </ul>
   </section>
@@ -142,7 +148,7 @@
     <table class="tariffs__table">
       <thead>
         <tr class="tariffs__names">
-          <th class="visually-hidden" scope="col">
+          <th class="tariffs__empty visually-hidden" scope="col">
             Свойства.
           </th>
 
@@ -153,7 +159,7 @@
             </p>
           </th>
 
-          <th class="hit tariffs__name" scope="col">
+          <th class="hit tariffs__name tariffs__name--central" scope="col">
             Стандарт
             <span class="hit__content">
               Хит

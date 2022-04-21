@@ -3,20 +3,21 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк &gt; {{ title }}</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
 
   <body class="page">
     <header class="page-header page__header">
       <a class="logo page-header__logo" href="index.html" {{ 'aria-current="page"' if page == 'index' }}>
-        <img class="logo__image" src="img/logo-pink-white.svg" alt="Логотип Pink.">
+        <img class="logo__image-pink" src="img/logo-pink-white.svg" width="74" height="23" alt="Логотип Pink.">
       </a>
 
       <nav class="nav page-header__nav">
-        <button class="nav__button-toogle" type="button">
+        {# <button class="nav__button-toogle" type="button">
           <span class="visually-hidden">
             Отвечает за открытие и закрытие меню.
           </span>
-        </button>
+        </button> #}
 
         <ul class="nav__list">
           <li class="nav__item">
@@ -82,8 +83,20 @@
       </ul>
 
       <a class="logo-dev page-footer__dev-link" href="https://htmlacademy.ru/intensive/adaptive">
-        Разработано <img class="logo-dev__image" src="img/logo-html-academy.svg" alt="Сайт академии HTML Academy.">
+        Разработано
+        <span class="logo-dev__image">
+        </span>
       </a>
     </footer>
+
+
+    <script>
+      window.pinegladePP = {
+        breakpoints: [320, 660, 1200],
+      };
+    </script>
+
+    <script src="https://efiand.github.io/pineglade-pp/pineglade-pp.min.js">
+    </script>
   </body>
 </html>

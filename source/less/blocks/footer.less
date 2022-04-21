@@ -1,0 +1,120 @@
+.page-footer {
+  position: relative;
+  padding: 40px 20px;
+}
+
+// .logo::before {
+//   content: "";
+//   position: absolute;
+//   left: 4px;
+//   top: 2px;
+//   background-color: currentColor;
+//   width: 145px;
+//   height: 40px;
+//   mask-image: url("../img/logo-pink.svg");
+// }
+
+.logo__image {
+  display: block;
+  margin: 0 auto;
+}
+
+
+.social-list {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin-bottom: 20px;
+  gap: 9px;
+}
+
+.social-list__item {
+  position: relative;
+}
+
+.social-list__link {
+  display: block;
+  padding: 20px;
+  border: 2px solid var(--color-asphalt-10);
+  border-radius: 50%;
+  color: var(--color-pink);
+
+  &:hover {
+    border-color: var(--color-asphalt);
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.social-list__link--vk::before {
+  content: "";
+  position: absolute;
+  left: 13px;
+  top: 17px;
+  width: 20px;
+  height: 20px;
+  background-color: currentColor;
+  mask-image: url("../../img/icon-vk.svg");
+  mask-repeat: no-repeat;
+}
+
+.social-list__link--tg::before {
+  content: "";
+  position: absolute;
+  left: 14px;
+  top: 16px;
+  width: 20px;
+  height: 20px;
+  background-color: currentColor;
+  mask-image: url("../../img/icon-tg.svg");
+  mask-repeat: no-repeat;
+}
+
+.social-list__link--youtube::after {
+  content: "";
+  position: absolute;
+  left: 15px;
+  top: 13px;
+  width: 20px;
+  height: 20px;
+  background-color: currentColor;
+  mask-image: url("../../img/icon-youtube.svg");
+  mask-repeat: no-repeat;
+}
+
+.logo-dev {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 43px;
+  color: var(--color-asphalt);
+  text-decoration: none;
+}
+
+.logo-dev__image {
+  position: relative;
+  display: block;
+  color: var(--color-pink);
+
+  &:hover,
+  &:active {
+    color: var(--color-asphalt);
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.logo-dev__image::after {
+  content: "";
+  position: absolute;
+  left: 15px;
+  top: -16px;
+  width: 27px;
+  height: 34px;
+  background-color: currentColor;
+  mask-image: url("../../img/logo-html-academy.svg");
+}
