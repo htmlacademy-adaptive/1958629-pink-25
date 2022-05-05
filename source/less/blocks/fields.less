@@ -1,8 +1,12 @@
 .fields {
   margin: 0;
-  padding: 0 20px;
+  padding: 0 20px 27px;
   border: none;
   line-height: 30px;
+}
+
+.form__fields {
+  padding-top: 30px;
 }
 
 .fields__group {
@@ -27,6 +31,7 @@
   color: var(--color-asphalt);
   outline: none;
   font-family: inherit;
+  transition: border-color 0.3s ease-in-out;
 
   &::placeholder {
     color: inherit;
@@ -41,4 +46,29 @@
   &:active {
     border-color: var(--color-pink);
   }
+}
+
+.form__fields--position {
+  padding-top: 36px;
+}
+
+.legends {
+  float: left;
+  width: 100%;
+  margin: 0 0 30px;
+  padding: 0;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--color-pink);
+}
+
+.fields__legend {
+  margin-bottom: 10px;
+}
+
+.fields__input--comment {
+  padding-bottom: 32px;
+  resize: none;
+  line-height: 30px;
 }

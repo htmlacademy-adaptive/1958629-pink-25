@@ -2,15 +2,43 @@
   background-color: var(--color-asphalt);
 }
 
+.page-header__bg {
+  position: relative;
+  padding: 21px 20px 17px;
+  background-color: var(--color-black-30);
+  z-index: 3;
+}
+
 .page-header__nav {
   margin: 0 -23px;
 }
 
-.logo__image-pink {
-  padding: 23px 20px;
+.page-header__position {
+  display: flex;
+}
+
+.page-header__button-toogle {
+  margin-left: auto;
+  padding: 0;
+  width: 50px;
+  height: 24px;
+  border: none;
+  background-color: transparent;
+  color: var(--color-white);
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 24px;
+    mask-image: url("../../img/icon-open-menu.svg");
+    background-color: currentColor;
+  }
 }
 
 .nav__list {
+  display: none;
   padding: 0;
   margin: 0;
 }

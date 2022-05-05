@@ -3,29 +3,38 @@
   padding: 40px 20px;
 }
 
-// .logo::before {
-//   content: "";
-//   position: absolute;
-//   left: 4px;
-//   top: 2px;
-//   background-color: currentColor;
-//   width: 145px;
-//   height: 40px;
-//   mask-image: url("../img/logo-pink.svg");
-// }
-
-.logo__image {
+.page-footer__logo {
+  position: relative;
   display: block;
-  margin: 0 auto;
+  margin: 0 auto 39px;
 }
 
+.page-footer__logo::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 2px;
+  background-color: currentColor;
+  width: 145px;
+  height: 40px;
+  mask-image: url("../img/logo-pink.svg");
+}
+
+// .logo__image {
+//
+
+//   &:hover {
+//     color: var(--color-pink);
+//   }
+// }
 
 .social-list {
   display: flex;
   justify-content: center;
+  margin: 0;
   padding: 0;
-  margin-bottom: 20px;
-  gap: 9px;
+  margin-bottom: 46px;
+  gap: 11px;
 }
 
 .social-list__item {
@@ -34,10 +43,11 @@
 
 .social-list__link {
   display: block;
-  padding: 20px;
+  padding: 24px;
   border: 2px solid var(--color-asphalt-10);
   border-radius: 50%;
   color: var(--color-pink);
+  transition: border-color, color, 0.2s ease-in-out;
 
   &:hover {
     border-color: var(--color-asphalt);
@@ -51,8 +61,8 @@
 .social-list__link--vk::before {
   content: "";
   position: absolute;
-  left: 13px;
-  top: 17px;
+  left: 17px;
+  top: 21px;
   width: 20px;
   height: 20px;
   background-color: currentColor;
@@ -63,8 +73,8 @@
 .social-list__link--tg::before {
   content: "";
   position: absolute;
-  left: 14px;
-  top: 16px;
+  left: 18px;
+  top: 19px;
   width: 20px;
   height: 20px;
   background-color: currentColor;
@@ -75,8 +85,8 @@
 .social-list__link--youtube::after {
   content: "";
   position: absolute;
-  left: 15px;
-  top: 13px;
+  left: 17px;
+  top: 17px;
   width: 20px;
   height: 20px;
   background-color: currentColor;
@@ -97,6 +107,7 @@
   position: relative;
   display: block;
   color: var(--color-pink);
+  transition: color, 0.2s ease-in-out;
 
   &:hover,
   &:active {

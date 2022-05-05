@@ -3,57 +3,64 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк &gt; {{ title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
   </head>
 
   <body class="page">
     <header class="page-header page__header">
-      <a class="logo page-header__logo" href="index.html" {{ 'aria-current="page"' if page == 'index' }}>
-        <img class="logo__image-pink" src="img/logo-pink-white.svg" width="74" height="23" alt="Логотип Pink.">
-      </a>
+      <div class="page-header__bg">
+        <div class="page-header__position">
+          <a class="logo page-header__logo" href="index.html" {{ 'aria-current="page"' if page == 'index' }}>
+            <img class="logo__image-pink" src="img/logo-pink-white.svg" width="74" height="23" alt="Логотип Pink.">
+          </a>
 
-      <nav class="nav page-header__nav">
-        {# <button class="nav__button-toogle" type="button">
-          <span class="visually-hidden">
-            Отвечает за открытие и закрытие меню.
-          </span>
-        </button> #}
+          <button class="page-header__button-toogle" type="button">
+            <span class="visually-hidden">
+              Отвечает за открытие и закрытие меню.
+            </span>
+          </button>
+        </div>
 
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a class="nav__link {{ 'nav__link--current' if page == 'index' }}" href="index.html" {{ 'aria-current="page"' if page == 'index' }}>
-              Главная
-            </a>
-          </li>
+        <nav class="nav page-header__nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link {{ 'nav__link--current' if page == 'index' }}" href="index.html" {{ 'aria-current="page"' if page == 'index' }}>
+                Главная
+              </a>
+            </li>
 
-          <li class="nav__item">
-            <a class="nav__link" href="catalog.html">
-              Фотографии
-            </a>
-          </li>
+            <li class="nav__item">
+              <a class="nav__link" href="catalog.html">
+                Фотографии
+              </a>
+            </li>
 
-          <li class="nav__item">
-            <a class="nav__link" href="form.html">
-              Конкурс
-            </a>
-          </li>
+            <li class="nav__item">
+              <a class="nav__link" href="form.html">
+                Конкурс
+              </a>
+            </li>
 
-          <li class="nav__item">
-            <a class="nav__link" href="#!">
-              HTML Academy
-            </a>
-          </li>
-        </ul>
-      </nav>
+            <li class="nav__item">
+              <a class="nav__link" href="#!">
+                HTML Academy
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
-
     <main class="page-main page__main">
       {% block main %}{% endblock %}
     </main>
 
     <footer class="page-footer page__footer">
-      <a class="logo page-footer__logo" href="index.html" {{ 'aria-current="page"' if page == 'index' }}>
-        <img class="logo__image" src="img/logo-pink.svg" alt="Логотип Pink.">
+      <a class="page-footer__logo" href="index.html" {{ 'aria-current="page"' if page == 'index' }}>
+        <span class="visually-hidden">
+          Логотип Pink.
+        </span>
+        {# <img class="logo__image" src="img/logo-pink.svg" alt="Логотип Pink."> #}
       </a>
 
       <ul class="social-list page-footer__social-list">
@@ -88,7 +95,6 @@
         </span>
       </a>
     </footer>
-
 
     <script>
       window.pinegladePP = {

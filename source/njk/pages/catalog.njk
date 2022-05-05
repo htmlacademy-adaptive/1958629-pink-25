@@ -12,48 +12,53 @@
 
     <b class="content__subtitle">
       Взгляните на фотографии, которые выкладывают пользователи!
+      <br>
       Видите, как не хватает ваших?
     </b>
 
-    <ul class="content__photo-list">
-      <li class="content__photo-item">
-        <article class="photo-users content__photo-users">
+    <ul class="photo-list content__photo-list">
+      <li class="photo-list__photo-item">
+        <article class="photo-users photo-list__photo-users">
           <h2 class="visually-hidden">
             Фотография пользователя-1.
           </h2>
 
-          <figure class="photo-users__block">
+          <figure class="photo-users__block photo-users__block--panorama">
             {# Тут будет надпись "ПАНОРАМА ДНЯ" через псевдоэлемент #}
-            <img class="photo-users__photo photo-users__photo--panorama" src="img/panorama-mobile.jpg" width="" height="" alt="Панорама гор и леса.">
-            <figcaption class="photo-users__photo-content">
+            <img class="photo-users__photo photo-users__photo--panorama" src="img/panorama-mobile.jpg" alt="Панорама гор и леса.">
+            <figcaption class="photo-users__photo-content photo-users__photo-content--panorama">
               <blockquote class="photo-users__quote">
                 <p class="photo-users__cite">
                   <cite class="photo-users__author">
                     Анна
                   </cite>
+
                   <time class="photo-users__time" datetime="2022-04-09T23:46:01">
                     (5 минут назад)
                   </time>
                 </p>
 
                 <p class="photo-users__description">
-                  Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!
+                  Прыгать или нет? Напишите в комментарии свой совет и
+                  <br>
+                  смотрите прямую трансляцию в перископе, задавайте свои вопросы!
                 </p>
+
+                <form class="photo-users__likes-form" action="https://echo.htmlacademy.ru" method="post">
+                  <button class="photo-users__button" type="submit" name="userID" value="1">
+                    <span class="visually-hidden">
+                      Поставить лайк.
+                    </span>
+                  </button>
+
+                  <p class="photo-users__likes">
+                    Нравится: 215
+                  </p>
+                  <input type="hidden" name="photo" value="Панорама гор и леса">
+                </form>
               </blockquote>
             </figcaption>
           </figure>
-
-          <form class="photo-users__likes-form" action="https://echo.htmlacademy.ru" method="post">
-            <p class="photo-users__likes">
-              Нравится: 215
-            </p>
-            <button class="photo-users__button" type="submit" name="userID" value="1">
-              <span class="visually-hidden">
-                Поставить лайк.
-              </span>
-            </button>
-            <input type="hidden" name="photo" value="Панорама гор и леса">
-          </form>
         </article>
       </li>
 
@@ -71,6 +76,7 @@
                   <cite class="photo-users__author">
                     Левон
                   </cite>
+
                   <time class="photo-users__time" datetime="2022-04-09T23:46:01">
                     (5 часов назад)
                   </time>
@@ -79,21 +85,22 @@
                 <p class="photo-users__description">
                   Вчера он на луну летал, сегодня в руки к нам попал.
                 </p>
+
+                <form class="photo-users__likes-form" action="https://echo.htmlacademy.ru" method="post">
+                  <button class="photo-users__button" type="submit" name="userID" value="1">
+                    <span class="visually-hidden">
+                      Поставить лайк.
+                    </span>
+                  </button>
+
+                  <p class="photo-users__likes">
+                    Нравится: 356
+                  </p>
+                  <input type="hidden" name="photo" value="Камера на триноге фоткает машину">
+                </form>
               </blockquote>
             </figcaption>
           </figure>
-
-          <form class="photo-users__likes-form" action="https://echo.htmlacademy.ru" method="post">
-            <p class="photo-users__likes">
-              Нравится: 356
-            </p>
-            <button class="photo-users__button" type="submit" name="userID" value="1">
-              <span class="visually-hidden">
-                Поставить лайк.
-              </span>
-            </button>
-            <input type="hidden" name="photo" value="Камера на триноге фоткает машину">
-          </form>
         </article>
       </li>
 
@@ -119,21 +126,22 @@
                 <p class="photo-users__description">
                   Соседи будут рады!
                 </p>
+
+                <form class="photo-users__likes-form" action="https://echo.htmlacademy.ru" method="post">
+                  <button class="photo-users__button" type="submit" name="userID" value="1">
+                    <span class="visually-hidden">
+                      Поставить лайк.
+                    </span>
+                  </button>
+
+                  <p class="photo-users__likes">
+                    Нравится: 666
+                  </p>
+                  <input type="hidden" name="photo" value="Барабанная установка">
+                </form>
               </blockquote>
             </figcaption>
           </figure>
-
-          <form class="photo-users__likes-form" action="https://echo.htmlacademy.ru" method="post">
-            <p class="photo-users__likes">
-              Нравится: 666
-            </p>
-            <button class="photo-users__button" type="submit" name="userID" value="1">
-              <span class="visually-hidden">
-                Поставить лайк.
-              </span>
-            </button>
-            <input type="hidden" name="photo" value="Барабанная установка">
-          </form>
         </article>
       </li>
 
@@ -159,21 +167,22 @@
                 <p class="photo-users__description">
                   Здесь могла быть ваша цитата о высоком и вечном.
                 </p>
+
+                <form class="photo-users__likes-form" action="https://echo.htmlacademy.ru" method="post">
+                  <button class="photo-users__button" type="submit" name="userID" value="1">
+                    <span class="visually-hidden">
+                      Поставить лайк.
+                    </span>
+                  </button>
+
+                  <p class="photo-users__likes">
+                    Нравится: 215
+                  </p>
+                  <input type="hidden" name="photo" value="Стеклянный потолок с видом на облака">
+                </form>
               </blockquote>
             </figcaption>
           </figure>
-
-          <form class="photo-users__likes-form" action="https://echo.htmlacademy.ru" method="post">
-            <p class="photo-users__likes">
-              Нравится: 215
-            </p>
-            <button class="photo-users__button" type="submit" name="userID" value="1">
-              <span class="visually-hidden">
-                Поставить лайк.
-              </span>
-            </button>
-            <input type="hidden" name="photo" value="Стеклянный потолок с видом на облака">
-          </form>
         </article>
       </li>
 
@@ -199,21 +208,22 @@
                 <p class="photo-users__description">
                   Самая кубанская в мире!
                 </p>
+
+                <form class="photo-users__likes-form" action="https://echo.htmlacademy.ru" method="post">
+                  <button class="photo-users__button" type="submit" name="userID" value="1">
+                    <span class="visually-hidden">
+                      Поставить лайк.
+                    </span>
+                  </button>
+
+                  <p class="photo-users__likes">
+                    Нравится: 4
+                  </p>
+                  <input type="hidden" name="photo" value="Шатер с кубанской бахчёй">
+                </form>
               </blockquote>
             </figcaption>
           </figure>
-
-          <form class="photo-users__likes-form" action="https://echo.htmlacademy.ru" method="post">
-            <p class="photo-users__likes">
-              Нравится: 4
-            </p>
-            <button class="photo-users__button" type="submit" name="userID" value="1">
-              <span class="visually-hidden">
-                Поставить лайк.
-              </span>
-            </button>
-            <input type="hidden" name="photo" value="Шатер с кубанской бахчёй">
-          </form>
         </article>
       </li>
 
@@ -231,6 +241,7 @@
                   <cite class="photo-users__author">
                     Максим
                   </cite>
+
                   <time class="photo-users__time" datetime="2022-04-09T23:46:01">
                     (40 часов назад)
                   </time>
@@ -239,21 +250,22 @@
                 <p class="photo-users__description">
                   Где снег-то?
                 </p>
+
+                <form class="photo-users__likes-form" action="https://echo.htmlacademy.ru" method="post">
+                  <button class="photo-users__button" type="submit" name="userID" value="1">
+                    <span class="visually-hidden">
+                      Поставить лайк.
+                    </span>
+                  </button>
+
+                  <p class="photo-users__likes">
+                    Нравится: 150
+                  </p>
+                  <input type="hidden" name="photo" value="Вид с высокой горы">
+                </form>
               </blockquote>
             </figcaption>
           </figure>
-
-          <form class="photo-users__likes-form" action="https://echo.htmlacademy.ru" method="post">
-            <p class="photo-users__likes">
-              Нравится: 150
-            </p>
-            <button class="photo-users__button" type="submit" name="userID" value="1">
-              <span class="visually-hidden">
-                Поставить лайк.
-              </span>
-            </button>
-            <input type="hidden" name="photo" value="Вид с высокой горы">
-          </form>
         </article>
       </li>
 
@@ -279,33 +291,37 @@
                 <p class="photo-users__description">
                   Всем GM и взаимные лайки!
                 </p>
+
+                <form class="photo-users__likes-form" action="https://echo.htmlacademy.ru" method="post">
+                  <button class="photo-users__button" type="submit" name="userID" value="1">
+                    <span class="visually-hidden">
+                      Поставить лайк.
+                    </span>
+                  </button>
+
+                  <p class="photo-users__likes">
+                    Нравится: 2560
+                  </p>
+                  <input type="hidden" name="photo" value="Вид из иллюмината самолета">
+                </form>
               </blockquote>
             </figcaption>
           </figure>
-
-          <form class="photo-users__likes-form" action="https://echo.htmlacademy.ru" method="post">
-            <p class="photo-users__likes">
-              Нравится: 2560
-            </p>
-            <button class="photo-users__button" type="submit" name="userID" value="1">
-              <span class="visually-hidden">
-                Поставить лайк.
-              </span>
-            </button>
-            <input type="hidden" name="photo" value="Вид из иллюмината самолета">
-          </form>
         </article>
       </li>
     </ul>
 
     <p class="content__subtitle">
       Затмите их всех!
+      <br>
       Выкладывайте все, что накопилось в телефоне!
     </p>
   </section>
 
   <section class="form-post page-main__form-post">
     <form class="form-post__form" action="https://echo.htmlacademy.ru" method="post">
+      <img class="form-post__photo" src="img/photo-7-mobile.jpg" width="" height="395" alt="Вид из иллюмината самолета.">
+
       <p class="form-post__add">
         <label class="visually-hidden">
           Запостите свою фотографию.
@@ -317,32 +333,56 @@
         Редактирование фотографии.
       </h2>
 
-      <p class="form-post__control">
-        <label class="form-post__label">
-          <span class="visually-hidden">
-            Обрезать.
-          </span>
-          <input class="form-post__input" type="range" name="cut" min="1" max="100" value="80" >
-        </label>
-      </p>
+      <fieldset class="form-post__fieldset">
+        <legend class="visually-hidden">
+          Фильры.
+        </legend>
 
-      <p class="form-post__control">
-        <label class="form-post__label">
-          <span class="visually-hidden">
-            Оттенок.
-          </span>
-          <input class="form-post__input" type="range" name="shade" min="1" max="100" value="20" >
-        </label>
-      </p>
+        <p class="form-post__control">
+          <button class="form-post__button-control form-post__button-control--cut" type="submit">
+            <span class="visually-hidden">
+              Переключить на режим обрезать.
+            </span>
+          </button>
 
-      <p class="form-post__control">
-        <label class="form-post__label">
-          <span class="visually-hidden">
-            Контраст.
-          </span>
-          <input class="form-post__input" type="range" name="contrast" min="1" max="100" value="50" >
-        </label>
-      </p>
+          <label class="form-post__label ">
+            <span class="visually-hidden">
+              Обрезать.
+            </span>
+            <input class="range form-post__range" type="range" name="cut" min="1" max="100" value="85" >
+          </label>
+        </p>
+
+        <p class="form-post__control">
+          <button class="form-post__button-control form-post__button-control--shade" type="submit">
+            <span class="visually-hidden">
+              Переключить на режим оттенок.
+            </span>
+          </button>
+
+          <label class="form-post__label form-post__label--none">
+            <span class="visually-hidden">
+              Оттенок.
+            </span>
+            <input class="range form-post__range" type="range" name="shade" min="1" max="100" value="20" >
+          </label>
+        </p>
+
+        <p class="form-post__control">
+          <button class="form-post__button-control form-post__button-control--contrast" type="submit">
+            <span class="visually-hidden">
+              Переключить на режим контраст.
+            </span>
+          </button>
+
+          <label class="form-post__label form-post__label--none">
+            <span class="visually-hidden">
+              Контраст.
+            </span>
+            <input class="range form-post__range" type="range" name="contrast" min="1" max="100" value="50" >
+          </label>
+        </p>
+      </fieldset>
 
       <p class="form-post__button-block">
         <button class="form-post__button" type="submit">
