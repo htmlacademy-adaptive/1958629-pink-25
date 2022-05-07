@@ -4,16 +4,17 @@
 
 {% block main %}
   <header class="promo page-main__promo">
-    <h1 class="visually-hidden">
-      Pink.
-    </h1>
+    <div class="promo__bg-block">
+      <h1 class="visually-hidden">
+        Pink.
+      </h1>
 
-    <b class="promo__lead">
-      Взгляните на жизнь иначе!
-    </b>
+      <b class="promo__lead">
+        Взгляните на жизнь иначе!
+      </b>
 
-    <img class="promo__img-phone" src="img/hand-phone.jpg" alt="Телефон с запущенным приложением Pink в руке.">
-
+      <img class="promo__img-phone" src="img/hand-phone.png" alt="Телефон с запущенным приложением Pink в руке.">
+    </div>
     <a class="promo__button-download" href="https://www.apple.com/ru/app-store/">
       Скачать приложение
     </a>
@@ -63,73 +64,78 @@
     </b>
 
     <dl class="features__list">
-      <dt class="features__item">
-        Поднимает настроение
-      </dt>
-      <dd class="features__description">
-        Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
-      </dd>
+      <div class="features__item features__item--1">
+        <dt class="features__title">
+          Поднимает настроение
+        </dt>
+        <dd class="features__description">
+          Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
+        </dd>
+      </div>
 
-      <dt class="features__item">
-        Меняет мир вокруг
-      </dt>
-      <dd class="features__description">
-        Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
-      </dd>
+      <div class="features__item features__item--2">
+        <dt class="features__title">
+          Меняет мир вокруг
+        </dt>
+        <dd class="features__description">
+          Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
+        </dd>
+      </div>
 
-      {# К этому пункту добавится декорация с телефоном #}
-      <dt class="features__item">
-        Заводит новых друзей
-      </dt>
-      <dd class="features__description">
-        Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
-      </dd>
+      <div class="features__item features__item--3">
+        <dt class="features__title">
+          Заводит новых друзей
+        </dt>
+        <dd class="features__description features__description--phone">
+          Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
+        </dd>
+      </div>
     </dl>
   </section>
 
 
-  <section class="reviews-section page-main__reviews">
+  <section class="reviews page-main__reviews">
     <h2 class="visually-hidden">
       Отзывы.
     </h2>
 
-    <ul class="reviews-section__list">
-      <li class="reviews-section__item">
-        <blockquote class="reviews-section__quote">
-          <cite class="reviews-section__author">
+    <ul class="reviews__list">
+      <li class="reviews__item">
+        <blockquote class="reviews__quote">
+          <cite class="reviews__author">
             Николай Петров
           </cite>
 
-          <p class="reviews-section__description">
+          <p class="reviews__description">
             «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
           </p>
         </blockquote>
       </li>
     </ul>
 
-    <ul class="togglers reviews-section__togglers-list">
+    <ul class="togglers reviews__togglers-list">
       <li class="togglers__item">
-        <a class="togglers__button togglers__button--current" href="#!">
+        <button class="togglers__button togglers__button--current" type="button">
           <span class="visually-hidden">
             К отзыву 1.
           </span>
-        </a>
+        </button>
       </li>
 
       <li class="togglers__item">
-        <a class="togglers__button" href="#!">
+        <button class="togglers__button" type="button">
           <span class="visually-hidden">
             К отзыву 2.
           </span>
-        </a>
+        </button>
       </li>
 
       <li class="togglers__item">
-        <a class="togglers__button" href="#!">
+        <button class="togglers__button" type="button">
           <span class="visually-hidden">
             К отзыву 3.
           </span>
-        </a>
+        </button>
       </li>
     </ul>
   </section>
@@ -139,152 +145,155 @@
       Тарифы.
     </h2>
 
-    <table class="tariffs__table">
-      <thead>
-        <tr class="tariffs__names">
-          <th class="visually-hidden" scope="col">
-            Свойства.
-          </th>
+    <div class="tariffs__wrap">
+      <table class="tariffs__table">
+        <thead>
+          <tr class="tariffs__names">
+            <th class="tariffs__empty visually-hidden" scope="col">
+              Свойства.
+            </th>
 
-          <th class="tariffs__name" scope="col">
-            База
-            <p class="tariffs__price">
-              1,99 USD
-            </p>
-          </th>
+            <th class="tariffs__name" scope="col">
+              База
+              <p class="tariffs__price">
+                1,99 USD
+              </p>
+            </th>
 
-          <th class="hit tariffs__name" scope="col">
-            Стандарт
-            <span class="hit__content">
-              Хит
-            </span>
-            <p class="tariffs__price">
-              3,99 USD
-            </p>
-          </th>
+            <th class="hit tariffs__name tariffs__name--central" scope="col">
+              Стандарт
+              <p class="hit__content">
+                Хит
+              </p>
+              <p class="tariffs__price">
+                3,99 USD
+              </p>
+            </th>
 
-          <th class="tariffs__name" scope="col">
-            Анлим
-            <p class="tariffs__price">
-              9,99 USD
-            </p>
-          </th>
-        </tr>
-      </thead>
+            <th class="tariffs__name" scope="col">
+              Анлим
+              <p class="tariffs__price">
+                9,99 USD
+              </p>
+            </th>
+          </tr>
+        </thead>
 
-      <tbody>
-        <tr class="tariffs__functions">
-          <th class="tariffs__function" scope="row">
-            Розовый фильтр
-          </th>
-          <td class="tariffs__function">
-            <p class="tariffs__value tariffs__value--yes">
-              <span class="visually-hidden">
-                Есть
-              </span>
-            </p>
-          </td>
+        <tbody>
+          <tr class="tariffs__functions">
 
-          <td class="tariffs__function">
-            <p class="tariffs__value tariffs__value--yes">
-              <span class="visually-hidden">
-                Есть
-              </span>
-            </p>
-          </td>
+            <td class="tariffs__function">
+              Розовый фильтр
+              <p class="tariffs__value tariffs__value--yes">
+                <span class="visually-hidden">
+                  Есть
+                </span>
+              </p>
+            </td>
 
-          <td class="tariffs__function">
-            <p class="tariffs__value tariffs__value--yes">
-              <span class="visually-hidden">
-                Есть
-              </span>
-            </p>
-          </td>
-        </tr>
+            <td class="tariffs__function">
+              Розовый фильтр
+              <p class="tariffs__value tariffs__value--yes">
+                <span class="visually-hidden">
+                  Есть
+                </span>
+              </p>
+            </td>
 
-        <tr class="tariffs__functions">
-          <th class="tariffs__function" scope="row">
-            Смайлики
-          </th>
-          <td class="tariffs__function">
-            <p class="tariffs__value tariffs__value--no">
-              <span class="visually-hidden">
-                Нет
-              </span>
-            </p>
-          </td>
+            <td class="tariffs__function">
+              Розовый фильтр
+              <p class="tariffs__value tariffs__value--yes">
+                <span class="visually-hidden">
+                  Есть
+                </span>
+              </p>
+            </td>
+          </tr>
 
-          <td class="tariffs__function">
-            <p class="tariffs__value tariffs__value--yes">
-              <span class="visually-hidden">
-                Есть
-              </span>
-            </p>
-          </td>
+          <tr class="tariffs__functions">
+            <td class="tariffs__function">
+              Смайлики
+              <p class="tariffs__value tariffs__value--no">
+                <span class="visually-hidden">
+                  Нет
+                </span>
+              </p>
+            </td>
 
-          <td class="tariffs__function">
-            <p class="tariffs__value tariffs__value--yes">
-              <span class="visually-hidden">
-                Есть
-              </span>
-            </p>
-          </td>
-        </tr>
+            <td class="tariffs__function">
+              Смайлики
+              <p class="tariffs__value tariffs__value--yes">
+                <span class="visually-hidden">
+                  Есть
+                </span>
+              </p>
+            </td>
 
-        <tr class="tariffs__functions">
-          <th class="tariffs__function" scope="row">
-            Комментарии
-          </th>
-          <td class="tariffs__function">
-            <p class="tariffs__value tariffs__value--no">
-              <span class="visually-hidden">
-                Нет
-              </span>
-            </p>
-          </td>
+            <td class="tariffs__function">
+              Смайлики
+              <p class="tariffs__value tariffs__value--yes">
+                <span class="visually-hidden">
+                  Есть
+                </span>
+              </p>
+            </td>
+          </tr>
 
-          <td class="tariffs__function">
-            <p class="tariffs__value tariffs__value--no">
-              <span class="visually-hidden">
-                Нет
-              </span>
-            </p>
-          </td>
+          <tr class="tariffs__functions">
+            <td class="tariffs__function">
+              Комментарии
+              <p class="tariffs__value tariffs__value--no">
+                <span class="visually-hidden">
+                  Нет
+                </span>
+              </p>
+            </td>
 
-          <td class="tariffs__function">
-            <p class="tariffs__value tariffs__value--yes">
-              <span class="visually-hidden">
-                Есть
-              </span>
-            </p>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+            <td class="tariffs__function">
+              Комментарии
+              <p class="tariffs__value tariffs__value--no">
+                <span class="visually-hidden">
+                  Нет
+                </span>
+              </p>
+            </td>
 
+            <td class="tariffs__function">
+              Комментарии
+              <p class="tariffs__value tariffs__value--yes">
+                <span class="visually-hidden">
+                  Есть
+                </span>
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
     <ul class="togglers tariffs__togglers-list">
       <li class="togglers__item">
-        <a class="togglers__button" href="#!">
+        <button class="togglers__button" type="button">
           <span class="visually-hidden">
             К тарифу «База».
           </span>
-        </a>
+        </button>
       </li>
 
       <li class="togglers__item">
-        <a class="togglers__button togglers__button--current" href="#!">
+        <button class="togglers__button togglers__button--current" type="button">
           <span class="visually-hidden">
             К тарифу «Стандарт».
           </span>
-        </a>
+        </button>
       </li>
 
       <li class="togglers__item">
-        <a class="togglers__button" href="#!">
+        <button class="togglers__button" type="button">
           <span class="visually-hidden">
             К тарифу «Анлим».
           </span>
-        </a>
+        </button>
       </li>
     </ul>
   </section>
@@ -323,5 +332,11 @@
         </a>
       </dd>
     </dl>
+
+    <p class="contacts__map">
+      <span class="visually-hidden">
+        Наше расположение на карте.
+      </span>
+    </p>
   </footer>
 {% endblock %}

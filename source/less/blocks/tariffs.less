@@ -1,0 +1,119 @@
+.tariffs {
+  margin: 52px 0 41px;
+  padding-bottom: 42px;
+  background-color: var(--color-lightgrey);
+
+  &::before {
+    content: "";
+    display: block;
+    margin: 0 -20px 50px;
+    height: 32px;
+    background-image: var(--skew-gradient);
+  }
+}
+
+.tariffs__wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tariffs__table {
+  width: calc(300% - 120px);
+  text-transform: uppercase;
+  border-collapse: collapse;
+}
+
+.tariffs__empty {
+  display: none;
+}
+
+.tariffs__name {
+  padding: 12px 43px 26px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 700;
+  color: var(--color-white);
+  background-color: var(--color-asphalt);
+}
+
+.tariffs__name--central {
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: var(--color-grey);
+  }
+
+  &::before {
+    left: 0;
+  }
+
+  &::after {
+    right: 0;
+  }
+}
+
+.hit {
+  position: relative;
+  overflow: hidden;
+}
+
+.hit__content {
+  position: absolute;
+  margin: 0;
+  top: 18px;
+  left: -27px;
+  transform: rotate(-45deg);
+  width: 110px;
+  line-height: 23px;
+  font-weight: 400;
+  background-color: var(--color-pink);
+}
+
+.tariffs__price {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 300;
+}
+
+.tariffs__functions {
+  line-height: 30px;
+  font-weight: 400;
+  background-color: var(--color-white);
+  color: var(--color-asphalt);
+}
+
+.tariffs__function {
+  position: relative;
+  padding: 13px 20px 16px;
+  text-align: start;
+  border-right: 2px solid var(--color-grey);
+  border-bottom: 2px solid var(--color-grey);
+  border-left: 2px solid var(--color-grey);
+}
+
+.tariffs__value {
+  position: absolute;
+  top: 4px;
+  right: 17px;
+  width: 31px;
+  height: 27px;
+  background-repeat: no-repeat;
+}
+
+.tariffs__value--yes {
+  background-image: url("../../img/icon-yes.svg");
+}
+
+.tariffs__value--no {
+  background-image: url("../../img/icon-no.svg");
+}

@@ -1,0 +1,103 @@
+.photo-users__block {
+  margin: 0;
+}
+
+.photo-users__photo {
+  display: block;
+  margin: 0 auto;
+}
+
+.photo-users__block--panorama {
+  position: relative;
+  margin: 0 -20px;
+
+  &::after {
+    content: "Панорама дня";
+    position: absolute;
+    right: 20px;
+    top: 0;
+    padding: 6px 20px;
+    background-color: var(--color-pink);
+    text-transform: uppercase;
+    color: var(--color-white);
+    line-height: 24px;
+    font-size: 12px;
+    font-weight: 700;
+  }
+}
+
+.photo-users__photo-content {
+  margin: 0;
+  background-color: var(--color-grey);
+}
+
+.photo-users__photo-content--panorama {
+  margin: 0 20px;
+}
+
+.photo-users__quote {
+  margin: 0;
+  padding: 17px 0 19px 17px;
+  font-family: inherit;
+  line-height: 24px;
+  color: var(--color-asphalt);
+}
+
+.photo-users__cite {
+  margin: 0;
+}
+
+.photo-users__time {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.photo-users__description {
+  margin: 0 0 11px;
+  font-weight: 400;
+}
+
+.photo-users__author {
+  font-weight: 700;
+  font-style: normal;
+}
+
+.photo-users__likes-form {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.photo-users__button {
+  padding: 0;
+  margin-right: 18px;
+  border: none;
+  background-color: transparent;
+  color: var(--color-pink);
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 13px;
+    height: 12px;
+    mask-image: url("../../img/icon-heart.svg");
+    background-color: currentColor;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.photo-users__likes {
+  margin: 0;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: var(--color-pink);
+}
