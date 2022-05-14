@@ -9,14 +9,31 @@
   font-size: 24px;
   line-height: 29px;
   font-weight: 300;
-  color: var(--color-asphalt);
+
+  @media @tablet-desktop {
+    font-size: 40px;
+    line-height: 54px;
+  }
+}
+
+.features__item {
+  @media @tablet-desktop {
+    margin: 34px 0 0 310px;
+    text-align: start;
+  }
 }
 
 .features__list {
+  position: relative;
   margin: 2px -20px 0;
   padding: 0 20px;
   text-align: center;
   background-color: var(--color-lightgrey);
+
+  @media @tablet-desktop {
+    min-height: 370px;
+    padding-bottom: 49px;
+  }
 
   &::before {
     content: "";
@@ -39,7 +56,6 @@
   margin: 0 0 32px;
   font-weight: 400;
   line-height: 24px;
-  color: var(--color-asphalt);
 }
 
 .features__item--3::after {
@@ -50,4 +66,13 @@
   width: 157px;
   background-repeat: no-repeat;
   background-image: url("../img/bg-feature-3.png");
+  background-size: cover;
+
+  @media @tablet-desktop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 266px;
+    height: 482px;
+  }
 }

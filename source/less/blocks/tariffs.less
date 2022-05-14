@@ -1,13 +1,13 @@
 .tariffs {
-  margin: 52px 0 41px;
+  margin: 0;
   padding-bottom: 42px;
   background-color: var(--color-lightgrey);
 
   &::before {
     content: "";
     display: block;
-    margin: 0 -20px 50px;
-    height: 32px;
+    margin: 0 0 83px;
+    height: 18px;
     background-image: var(--skew-gradient);
   }
 }
@@ -16,12 +16,21 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media @tablet-desktop {
+    padding: 0 20px;
+  }
 }
 
 .tariffs__table {
   width: calc(300% - 120px);
   text-transform: uppercase;
   border-collapse: collapse;
+
+  @media @tablet-desktop {
+    width: 100%;
+    text-transform: none;
+  }
 }
 
 .tariffs__empty {
@@ -36,6 +45,21 @@
   font-weight: 700;
   color: var(--color-white);
   background-color: var(--color-asphalt);
+
+  @media @tablet-desktop {
+    width: 25%;
+    padding: 12px 36px 10px;
+    text-transform: uppercase;
+  }
+}
+
+.tariffs__name--none {
+  display: none;
+
+  @media @tablet-desktop {
+    display: block;
+    background-color: transparent;
+  }
 }
 
 .tariffs__name--central {
@@ -60,36 +84,22 @@
   }
 }
 
-.hit {
-  position: relative;
-  overflow: hidden;
-}
-
-.hit__content {
-  position: absolute;
-  margin: 0;
-  top: 18px;
-  left: -27px;
-  transform: rotate(-45deg);
-  width: 110px;
-  line-height: 23px;
-  font-weight: 400;
-  background-color: var(--color-pink);
-}
-
 .tariffs__price {
   margin: 0;
   padding: 0;
   font-size: 18px;
   line-height: 30px;
   font-weight: 300;
+
+  @media @tablet-desktop {
+    text-transform: uppercase;
+  }
 }
 
 .tariffs__functions {
   line-height: 30px;
   font-weight: 400;
   background-color: var(--color-white);
-  color: var(--color-asphalt);
 }
 
 .tariffs__function {
@@ -99,6 +109,22 @@
   border-right: 2px solid var(--color-grey);
   border-bottom: 2px solid var(--color-grey);
   border-left: 2px solid var(--color-grey);
+
+  @media @tablet-desktop {
+    padding: 7px 15px 8px;
+  }
+}
+
+.tariffs__alter {
+  @media @tablet-desktop {
+    display: none;
+  }
+}
+
+.tariffs__function--none {
+  @media @mobile {
+    display: none;
+  }
 }
 
 .tariffs__value {
@@ -108,12 +134,22 @@
   width: 31px;
   height: 27px;
   background-repeat: no-repeat;
+
+  @media @tablet-desktop {
+    transform: translate(50%, 50%);
+    right: 50%;
+    top: -38%;
+  }
 }
 
 .tariffs__value--yes {
-  background-image: url("../../img/icon-yes.svg");
+  background-image: url("../img/icon-yes.svg");
 }
 
 .tariffs__value--no {
-  background-image: url("../../img/icon-no.svg");
+  background-image: url("../img/icon-no.svg");
+}
+
+.tariffs__togglers-list {
+  padding-top: 36px;
 }

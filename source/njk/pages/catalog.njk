@@ -24,8 +24,13 @@
           </h2>
 
           <figure class="photo-users__block photo-users__block--panorama">
-            {# Тут будет надпись "ПАНОРАМА ДНЯ" через псевдоэлемент #}
+
+            <p class="photo-users__panorama">
+              Панорама дня
+            </p>
+
             <img class="photo-users__photo photo-users__photo--panorama" src="img/panorama-mobile.jpg" alt="Панорама гор и леса.">
+
             <figcaption class="photo-users__photo-content photo-users__photo-content--panorama">
               <blockquote class="photo-users__quote">
                 <p class="photo-users__cite">
@@ -320,11 +325,11 @@
 
   <section class="form-post page-main__form-post">
     <form class="form-post__form" action="https://echo.htmlacademy.ru" method="post">
-      <img class="form-post__photo" src="img/photo-7-mobile.jpg" width="" height="395" alt="Вид из иллюмината самолета.">
-
       <p class="form-post__add">
-        <label class="visually-hidden">
-          Запостите свою фотографию.
+        <label class="form-post__label">
+          <span class="visually-hidden">
+            Запостите свою фотографию.
+          </span>
           <input class="visually-hidden" type="file" >
         </label>
       </p>
@@ -360,7 +365,7 @@
             </span>
           </button>
 
-          <label class="form-post__label form-post__label--none">
+          <label class="form-post__label form-post__label--current">
             <span class="visually-hidden">
               Оттенок.
             </span>
@@ -375,7 +380,7 @@
             </span>
           </button>
 
-          <label class="form-post__label form-post__label--none">
+          <label class="form-post__label form-post__label--current">
             <span class="visually-hidden">
               Контраст.
             </span>

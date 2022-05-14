@@ -1,15 +1,15 @@
-.checkboxs {
+.checkboxes {
   margin: 0;
-  padding: 38px 20px 45px;
+  padding: 38px 20px 47px;
   border: none;
-  background-color: var(--color-grey);
+  background-color: var(--color-lightgrey);
 }
 
-.checkboxs__legend {
+.checkboxes__legend {
   margin-bottom: 27px;
 }
 
-.checkboxs__list {
+.checkboxes__list {
   display: flex;
   flex-direction: column;
   gap: 39px;
@@ -22,11 +22,17 @@
   }
 }
 
-.checkboxs__input {
+.checkboxes__label {
+  padding-left: 19px;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.checkboxes__input {
   position: relative;
   width: 35px;
   height: 35px;
-  margin: 0 19px 0 0;
+  margin: 0;
   outline: none;
   cursor: pointer;
   appearance: none;
@@ -34,9 +40,9 @@
   &::before {
     content: "";
     position: absolute;
-    right: -4px;
+    left: -20px;
+    right: 15px;
     bottom: -13px;
-    left: 0;
     background-color: var(--color-white);
     border: 2px solid var(--color-grey);
     transition: border-color 0.3s ease-in-out;
@@ -70,8 +76,8 @@
     }
 
     &::after {
-      top: 20px;
-      left: 9px;
+      top: 19px;
+      left: -10px;
       width: 22px;
       height: 16px;
       mask-image: url("../img/icon-tick.svg");
@@ -79,7 +85,7 @@
   }
 
   &--radio {
-    margin-right: 30px;
+    padding-left: 46px;
 
     &::before {
       top: 8px;
@@ -90,15 +96,10 @@
 
     &::after {
       top: 21px;
-      left: 13px;
+      left: -6px;
       width: 15px;
       height: 15px;
       border-radius: 50%;
     }
   }
-}
-
-.checkboxs__label {
-  font-size: 18px;
-  line-height: 30px;
 }

@@ -93,6 +93,23 @@
     </dl>
   </section>
 
+  <section class="announce page-main__announce">
+    <h2 class="announce__headline">
+      Эффект
+      <br>
+      на 24 часа!
+    </h2>
+
+    <p class="announce__desc">
+      Британские ученые провели исследования
+      и доказали, что положительный эффект
+      от использования приложения длится целые сутки!
+    </p>
+
+    <a class="announce__linck" href="#!" >
+      Узнать больше об исследовании
+    </a>
+  </section>
 
   <section class="reviews page-main__reviews">
     <h2 class="visually-hidden">
@@ -104,6 +121,10 @@
         <blockquote class="reviews__quote">
           <cite class="reviews__author">
             Николай Петров
+
+            <span class="reviews__author-bio">
+              25 лет, водитель трамвая
+            </span>
           </cite>
 
           <p class="reviews__description">
@@ -149,8 +170,10 @@
       <table class="tariffs__table">
         <thead>
           <tr class="tariffs__names">
-            <th class="tariffs__empty visually-hidden" scope="col">
-              Свойства.
+            <th class="tariffs__name tariffs__name--none" scope="col">
+              <span class="visually-hidden">
+                Свойства.
+              </span>
             </th>
 
             <th class="tariffs__name" scope="col">
@@ -181,9 +204,15 @@
 
         <tbody>
           <tr class="tariffs__functions">
+            <td class="tariffs__function tariffs__function--none">
+              Розовый фильтр
+            </td>
 
             <td class="tariffs__function">
-              Розовый фильтр
+              <span class="tariffs__alter">
+                Розовый фильтр
+              </span>
+
               <p class="tariffs__value tariffs__value--yes">
                 <span class="visually-hidden">
                   Есть
@@ -192,7 +221,10 @@
             </td>
 
             <td class="tariffs__function">
-              Розовый фильтр
+              <span class="tariffs__alter">
+                Розовый фильтр
+              </span>
+
               <p class="tariffs__value tariffs__value--yes">
                 <span class="visually-hidden">
                   Есть
@@ -201,7 +233,10 @@
             </td>
 
             <td class="tariffs__function">
-              Розовый фильтр
+              <span class="tariffs__alter">
+                Розовый фильтр
+              </span>
+
               <p class="tariffs__value tariffs__value--yes">
                 <span class="visually-hidden">
                   Есть
@@ -211,8 +246,15 @@
           </tr>
 
           <tr class="tariffs__functions">
-            <td class="tariffs__function">
+            <td class="tariffs__function tariffs__function--none">
               Смайлики
+            </td>
+
+            <td class="tariffs__function">
+              <span class="tariffs__alter">
+                Смайлики
+              </span>
+
               <p class="tariffs__value tariffs__value--no">
                 <span class="visually-hidden">
                   Нет
@@ -221,7 +263,10 @@
             </td>
 
             <td class="tariffs__function">
-              Смайлики
+              <span class="tariffs__alter">
+                Смайлики
+              </span>
+
               <p class="tariffs__value tariffs__value--yes">
                 <span class="visually-hidden">
                   Есть
@@ -230,7 +275,10 @@
             </td>
 
             <td class="tariffs__function">
-              Смайлики
+              <span class="tariffs__alter">
+                Смайлики
+              </span>
+
               <p class="tariffs__value tariffs__value--yes">
                 <span class="visually-hidden">
                   Есть
@@ -240,8 +288,15 @@
           </tr>
 
           <tr class="tariffs__functions">
-            <td class="tariffs__function">
+            <td class="tariffs__function tariffs__function--none">
               Комментарии
+            </td>
+
+            <td class="tariffs__function">
+              <span class="tariffs__alter">
+                Комментарии
+              </span>
+
               <p class="tariffs__value tariffs__value--no">
                 <span class="visually-hidden">
                   Нет
@@ -250,7 +305,10 @@
             </td>
 
             <td class="tariffs__function">
-              Комментарии
+              <span class="tariffs__alter">
+                Комментарии
+              </span>
+
               <p class="tariffs__value tariffs__value--no">
                 <span class="visually-hidden">
                   Нет
@@ -259,7 +317,10 @@
             </td>
 
             <td class="tariffs__function">
-              Комментарии
+             <span class="tariffs__alter">
+                Комментарии
+              </span>
+
               <p class="tariffs__value tariffs__value--yes">
                 <span class="visually-hidden">
                   Есть
@@ -270,7 +331,7 @@
         </tbody>
       </table>
     </div>
-    
+
     <ul class="togglers tariffs__togglers-list">
       <li class="togglers__item">
         <button class="togglers__button" type="button">
@@ -301,36 +362,45 @@
   <footer class="contacts page-main__footer">
     <p class="contacts__tagline">
       Остались вопросы?
+      <br>
       Свяжитесь с нами!
     </p>
 
     <dl class="contacts-list contacts__list">
-      <dt class="contacts-list__item">
-        Звоните:
-      </dt>
-      <dd class="contacts-list__description">
-        <a class="contacts-list__link" href="tel:+78125556666">
-          +7 (812) 555-66-66
-        </a>
-      </dd>
+      <div class="contacts__wrapper">
+        <dt class="contacts-list__item">
+          Звоните:
+        </dt>
+        <dd class="contacts-list__description">
+          <a class="contacts-list__link" href="tel:+78125556666">
+            +7 (812) 555-66-66
+          </a>
+        </dd>
+      </div>
 
-      <dt class="contacts-list__item">
-        Пишите:
-      </dt>
-      <dd class="contacts-list__description">
-        <a class="contacts-list__link" href="mailto:mail@htmlacademy.ru">
-          mail@htmlacademy.ru
-        </a>
-      </dd>
+      <div class="contacts__wrapper">
+        <dt class="contacts-list__item">
+          Пишите:
+        </dt>
+        <dd class="contacts-list__description">
+          <a class="contacts-list__link" href="mailto:mail@htmlacademy.ru">
+            mail@htmlacademy.ru
+          </a>
+        </dd>
+      </div>
 
-      <dt class="contacts-list__item">
-        Приезжайте в гости:
-      </dt>
-      <dd class="contacts-list__description">
-        <a class="contacts-list__link" href="#!">
-          ул. Большая Конюшенная, 19/8
-        </a>
-      </dd>
+      <div class="contacts__wrapper contacts__wrapper--center">
+        <dt class="contacts-list__item">
+          Приезжайте в гости:
+        </dt>
+        <dd class="contacts-list__description">
+          <a class="contacts-list__link" href="#!">
+            ул. Большая
+            <br>
+            Конюшенная, 19/8
+          </a>
+        </dd>
+      </div>
     </dl>
 
     <p class="contacts__map">

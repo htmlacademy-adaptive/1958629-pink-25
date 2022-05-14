@@ -1,13 +1,26 @@
 .promo {
-  background-color: var(--color-asphalt);
   padding: 0 20px 32px;
+  background-color: var(--color-asphalt-dark);
   color: var(--color-white);
+
+  @media @tablet-desktop {
+    position: relative;
+    padding: 179px 20px 126px;
+    margin-top: -110px;
+    background-image: url("../img/back-tablet.jpg");
+    background-size: cover;
+  }
 }
 
 .promo__bg-block {
   background-image: url("../img/back-mobile.jpg");
   background-size: cover;
   margin: -65px -20px 28px;
+
+  @media @tablet-desktop {
+    background-image: none;
+    margin: -65px -20px 50px;
+  }
 }
 
 .promo__lead {
@@ -17,11 +30,27 @@
   font-size: 24px;
   line-height: 29px;
   font-weight: 300;
+
+  @media @tablet-desktop {
+    width: 300px;
+    font-size: 40px;
+    line-height: 48px;
+
+
+  }
 }
 
 .promo__img-phone {
   display: block;
   margin: 0 auto;
+
+  @media @tablet-desktop {
+    position: absolute;
+    right: -70px;
+    bottom: 0;
+    width: 500px;
+    margin-left: auto;
+  }
 }
 
 .promo__button-download {
@@ -38,6 +67,13 @@
   color: var(--color-white);
   transition: color, 0.2s ease-in-out;
 
+  @media @tablet-desktop {
+    position: relative;
+    display: inline-block;
+    padding: 15px 45px;
+    margin-bottom: 46px;
+  }
+
   &:hover {
     background-color: var(--color-white);
     color: var(--color-pink);
@@ -49,39 +85,17 @@
   }
 }
 
-.platforms-list {
-  display: flex;
-  justify-content: center;
-  padding: 0;
-  margin: 0 0 8px;
-}
-
-.platforms-list__link {
-  display: block;
-  padding: 12px 12px 0;
-  width: 47px;
-  height: 56px;
-  background-repeat: no-repeat;
-}
-
-.platforms-list__link--apple {
-  background-position-x: 4px;
-  background-image: url("../img/icon-apple.svg");
-}
-
-.platforms-list__link--android {
-  background-position: 15px 6px;
-  background-image: url("../img/icon-android.svg");
-}
-
-.platforms-list__link--microsoft {
-  background-position: 22px 12px;
-  background-image: url("../img/icon-microsoft.svg");
-}
-
 .promo__desc {
   margin: 0;
   line-height: 24px;
   font-weight: 300;
   text-align: center;
+
+  @media @tablet-desktop {
+    position: relative;
+    z-index: 2;
+    width: 300px;
+    font-size: 18px;
+    line-height: 24px;
+  }
 }

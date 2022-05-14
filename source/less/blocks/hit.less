@@ -1,0 +1,21 @@
+.hit {
+  position: relative;
+  overflow: hidden;
+}
+
+.hit__content {
+  position: absolute;
+  margin: 0;
+  top: 18px;
+  left: -27px;
+  transform: rotate(-45deg);
+  width: 110px;
+  line-height: 23px;
+  font-weight: 400;
+  background-color: var(--color-pink);
+
+  @media @tablet-desktop {
+    top: 11px;
+    left: -36px;
+  }
+}

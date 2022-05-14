@@ -1,0 +1,36 @@
+.platforms-list {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0 0 8px;
+
+  @media @tablet-desktop {
+    position: relative;
+    z-index: 2;
+    justify-content: start;
+    padding-left: 41px;
+  }
+}
+
+.platforms-list__link {
+  display: block;
+  padding: 12px 12px 0;
+  width: 47px;
+  height: 56px;
+  background-repeat: no-repeat;
+}
+
+.platforms-list__link--apple {
+  background-position-x: 4px;
+  background-image: url("../img/icon-apple.svg");
+}
+
+.platforms-list__link--android {
+  background-position: 15px 6px;
+  background-image: url("../img/icon-android.svg");
+}
+
+.platforms-list__link--microsoft {
+  background-position: 22px 12px;
+  background-image: url("../img/icon-microsoft.svg");
+}

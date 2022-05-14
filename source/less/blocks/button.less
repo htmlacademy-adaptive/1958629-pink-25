@@ -1,4 +1,5 @@
 .button {
+  box-sizing: border-box;
   padding: 17px 20px;
   border-radius: 3px;
   font-size: 18px;
@@ -9,13 +10,18 @@
   text-transform: uppercase;
   border: none;
   cursor: pointer;
-  transition: color, 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 
   &:hover {
-    background-color: var(--color-darck-green);
+    background-color: var(--color-dark-green);
+  }
+
+  &:focus-visible {
+    background-color: var(--color-dark-green);
   }
 
   &:active {
     color: var(--color-white-30);
+    background-color: var(--color-dark-green);
   }
 }
