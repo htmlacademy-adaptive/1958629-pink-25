@@ -1,11 +1,14 @@
-.form-post__photo {
-  display: block;
-  margin: 0 auto;
+.form-post {
+  padding: 20px 20px 43px;
+  background-color: var(--color-lightgrey);
 }
 
-.form-post {
-  padding: 10px 20px 43px;
-  background-color: var(--color-grey);
+.form-post__add {
+  display: block;
+  margin: 0 0 25px 0;
+  padding: 0;
+  height: 374px;
+  background-image: url("../img/photo-7-mobile.jpg");
 }
 
 .form-post__fieldset {
@@ -14,21 +17,13 @@
   flex-wrap: wrap;
   box-sizing: border-box;
   justify-content: center;
-  margin: 0 0 -17px -82px;
+  margin: 0 -40px -17px -82px;
   padding: 0 0 120px;
   border: none;
 }
 
 .form-post__control {
-  margin: 17px 0 0 35px;
-}
-
-.form-post__control:not(:last-child) {
-  margin-right: 40px;
-}
-
-.form-post__control .form-post__button-control--cut {
-  color: var(--color-pink);
+  margin: 17px 40px 0 35px;
 }
 
 .form-post__button-control {
@@ -42,28 +37,30 @@
 
   &::before {
     content: "";
+    position: absolute;
     display: block;
     width: 48px;
     height: 44px;
+    mask-repeat: no-repeat;
     background-color: currentColor;
   }
 }
 
+.form-post__button-control--cut {
+  color: var(--color-pink);
+}
+
 .form-post__button-control--cut::before {
-  position: absolute;
   top: -13px;
   left: 7px;
-  mask-repeat: no-repeat;
-  mask-image: url("../../img/icon-crop.svg");
+  mask-image: url("../img/icon-crop.svg");
 }
 
 .form-post__button-control--shade {
   &::before {
-    position: absolute;
     top: -13px;
     left: 3px;
-    mask-repeat: no-repeat;
-    mask-image: url("../../img/icon-fill.svg");
+    mask-image: url("../img/icon-fill.svg");
   }
 
   &:hover {
@@ -73,11 +70,9 @@
 
 .form-post__button-control--contrast {
   &::before {
-    position: absolute;
     top: -7px;
     left: 3px;
-    mask-repeat: no-repeat;
-    mask-image: url("../../img/icon-contrast.svg");
+    mask-image: url("../img/icon-contrast.svg");
   }
 
   &:hover {
@@ -85,7 +80,7 @@
   }
 }
 
-.form-post__label--none {
+.form-post__label--current {
   display: none;
 }
 
@@ -108,7 +103,7 @@
   transition-property: color, background-color, border-color;
 
   &:not(:last-child) {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
   }
 
   &:hover {

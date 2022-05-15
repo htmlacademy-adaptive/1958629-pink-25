@@ -6,6 +6,11 @@
 .reviews__quote {
   text-align: center;
   margin: 0;
+
+  @media @tablet-desktop {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 }
 
 .reviews__author {
@@ -14,6 +19,22 @@
   font-size: 18px;
   font-style: normal;
   color: var(--color-black);
+
+  @media @tablet-desktop {
+    padding-bottom: 45px;
+  }
+}
+
+.reviews__author-bio {
+  display: block;
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: 400;
+  color: var(--color-asphalt);
+
+  @media @mobile {
+    display: none;
+  }
 }
 
 .reviews__description {
@@ -21,5 +42,4 @@
   font-size: 14px;
   line-height: 30px;
   font-weight: 400;
-  color: var(--color-asphalt);
 }
