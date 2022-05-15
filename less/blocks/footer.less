@@ -1,0 +1,33 @@
+.page-footer {
+  position: relative;
+  padding: 40px 20px;
+
+  @media @tablet-desktop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 54px;
+  }
+}
+
+.page-footer__logo {
+  position: relative;
+  display: block;
+  margin: 0 auto 39px;
+
+  @media @tablet-desktop {
+    margin: 0;
+    width: 145px;
+  }
+}
+
+.page-footer__logo::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 2px;
+  background-color: currentColor;
+  width: 145px;
+  height: 40px;
+  mask-image: url("../img/logo-pink.svg");
+}

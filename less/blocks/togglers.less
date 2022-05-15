@@ -1,0 +1,41 @@
+.togglers {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  padding: 0;
+  margin: auto;
+
+  @media @tablet-desktop {
+    display: none;
+  }
+}
+
+.reviews__togglers-list {
+  padding-bottom: 33px;
+}
+
+.togglers__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    background-color: var(--color-asphalt-30);
+    border-radius: 50%;
+  }
+}
+
+.togglers__button--current::before {
+  content: "";
+  background-color: var(--color-white);
+  border: 3px solid var(--color-asphalt);
+}

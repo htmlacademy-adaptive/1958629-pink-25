@@ -1,0 +1,101 @@
+.promo {
+  padding: 0 20px 32px;
+  background-color: var(--color-asphalt-dark);
+  color: var(--color-white);
+
+  @media @tablet-desktop {
+    position: relative;
+    padding: 179px 20px 126px;
+    margin-top: -110px;
+    background-image: url("../img/back-tablet.jpg");
+    background-size: cover;
+  }
+}
+
+.promo__bg-block {
+  background-image: url("../img/back-mobile.jpg");
+  background-size: cover;
+  margin: -65px -20px 28px;
+
+  @media @tablet-desktop {
+    background-image: none;
+    margin: -65px -20px 50px;
+  }
+}
+
+.promo__lead {
+  display: block;
+  text-align: center;
+  padding: 89px 20px 29px;
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 300;
+
+  @media @tablet-desktop {
+    width: 300px;
+    font-size: 40px;
+    line-height: 48px;
+
+
+  }
+}
+
+.promo__img-phone {
+  display: block;
+  margin: 0 auto;
+
+  @media @tablet-desktop {
+    position: absolute;
+    right: -70px;
+    bottom: 0;
+    width: 500px;
+    margin-left: auto;
+  }
+}
+
+.promo__button-download {
+  display: block;
+  padding: 15px 20px;
+  margin: 0 0 32px;
+  border: 3px solid var(--color-white);
+  border-radius: 29px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 19px;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--color-white);
+  transition: color, 0.2s ease-in-out;
+
+  @media @tablet-desktop {
+    position: relative;
+    display: inline-block;
+    padding: 15px 45px;
+    margin-bottom: 46px;
+  }
+
+  &:hover {
+    background-color: var(--color-white);
+    color: var(--color-pink);
+  }
+
+  &:active {
+    background-color: var(--color-white);
+    color: var(--color-pink-30);
+  }
+}
+
+.promo__desc {
+  margin: 0;
+  line-height: 24px;
+  font-weight: 300;
+  text-align: center;
+
+  @media @tablet-desktop {
+    position: relative;
+    z-index: 2;
+    width: 300px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+}

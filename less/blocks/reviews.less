@@ -1,0 +1,45 @@
+.reviews__list {
+  margin: 0;
+  padding: 0 20px;
+}
+
+.reviews__quote {
+  text-align: center;
+  margin: 0;
+
+  @media @tablet-desktop {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+.reviews__author {
+  font-weight: 700;
+  line-height: 30px;
+  font-size: 18px;
+  font-style: normal;
+  color: var(--color-black);
+
+  @media @tablet-desktop {
+    padding-bottom: 45px;
+  }
+}
+
+.reviews__author-bio {
+  display: block;
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: 400;
+  color: var(--color-asphalt);
+
+  @media @mobile {
+    display: none;
+  }
+}
+
+.reviews__description {
+  margin: 12px 0 28px;
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: 400;
+}
