@@ -5,10 +5,15 @@
 
   @media @tablet-desktop {
     position: relative;
-    padding: 179px 20px 126px;
+    padding: 179px 20px 114px;
     margin-top: -110px;
     background-image: url("../img/back-tablet.jpg");
     background-size: cover;
+
+    @media @desktop {
+      background-image: url("../img/back-desktop.jpg");
+      padding: 186px 131px 125px;
+    }
   }
 }
 
@@ -19,7 +24,7 @@
 
   @media @tablet-desktop {
     background-image: none;
-    margin: -65px -20px 50px;
+    margin: -65px -20px 31px;
   }
 }
 
@@ -35,8 +40,13 @@
     width: 300px;
     font-size: 40px;
     line-height: 48px;
+    padding-bottom: 0;
+  }
 
-
+  @media @desktop {
+    font-size: 50px;
+    line-height: 68px;
+    margin-bottom: 35px;
   }
 }
 
@@ -72,6 +82,12 @@
     display: inline-block;
     padding: 15px 45px;
     margin-bottom: 46px;
+  }
+
+  @media @desktop {
+    font-size: 21px;
+    padding: 15px 28px;
+    margin-bottom: 68px;
   }
 
   &:hover {

@@ -1,12 +1,25 @@
 .page-footer {
   position: relative;
-  padding: 40px 20px;
+  padding: 4px 20px 40px;
 
   @media @tablet-desktop {
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 54px;
+    padding: 16px 20px 39px;
+  }
+
+  @media @desktop {
+    padding: 57px 131px;
+  }
+}
+
+.page-footer__logo-pink {
+  display: block;
+  margin: 0 auto;
+
+  @media @tablet-desktop {
+    margin: -12px auto 0;
   }
 }
 
@@ -21,13 +34,13 @@
   }
 }
 
-.page-footer__logo::before {
-  content: "";
-  position: absolute;
-  left: 4px;
-  top: 2px;
-  background-color: currentColor;
-  width: 145px;
-  height: 40px;
-  mask-image: url("../img/logo-pink.svg");
-}
+// .page-footer__logo::before {
+//   content: "";
+//   position: absolute;
+//   left: 4px;
+//   top: 2px;
+//   background-color: currentColor;
+//   width: 145px;
+//   height: 40px;
+//   mask-image: url("../img/logo-pink.svg");
+// }

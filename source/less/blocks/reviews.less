@@ -1,6 +1,34 @@
+.reviews {
+  @media @desktop {
+    position: relative;
+  }
+}
+
 .reviews__list {
+  position: relative;
   margin: 0;
   padding: 0 20px;
+
+  @media @desktop {
+    margin: 0 auto;
+    width: 734px;
+    padding: 185px 20px 20px;
+    background-image: url("../img/icon-comma.svg");
+    background-size: 79px 63px;
+    background-repeat: no-repeat;
+    background-position: 50% 20%;
+  }
+
+  // &::before {
+  //   @media @desktop {
+  //     content: "";
+  //     position: absolute;
+  //     width: 22px;
+  //     height: 41px;
+  //     mask-image: url("icon-left-arrow");
+  //     mask-repeat: no-repeat;
+  //   }
+  // }
 }
 
 .reviews__quote {
@@ -21,7 +49,12 @@
   color: var(--color-black);
 
   @media @tablet-desktop {
-    padding-bottom: 45px;
+    padding-bottom: 32px;
+    font-size: 20px;
+  }
+
+  @media @desktop {
+    font-size: 24px;
   }
 }
 
@@ -35,6 +68,10 @@
   @media @mobile {
     display: none;
   }
+
+  @media @desktop {
+    font-size: 18px;
+  }
 }
 
 .reviews__description {
@@ -42,4 +79,25 @@
   font-size: 14px;
   line-height: 30px;
   font-weight: 400;
+
+  @media @tablet-desktop {
+    margin: 0 0 35px;
+    font-size: 18px;
+  }
+
+  @media @desktop {
+    font-size: 18px;
+  }
+}
+
+.reviews__togglers-list {
+  padding-bottom: 33px;
+
+  @media @tablet-desktop {
+    padding-bottom: 10px;
+  }
+
+  @media @desktop {
+    display: none;
+  }
 }
