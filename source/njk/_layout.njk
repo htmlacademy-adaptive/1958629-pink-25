@@ -8,7 +8,7 @@
   </head>
 
   <body class="page">
-    <header class="page-header page__header page__header--js">
+    <header class="page-header page__header js-page-header">
       <div class="page-header__wrapper">
         <div class="page-header__position page-header__position--js">
           <a class="logo page-header__logo" href="index.html" {{ 'aria-current="page"' if page == 'index' }}>
@@ -17,14 +17,14 @@
             <img class="logo__image-variables" src="img/icon-logo-white.svg" width="145" height="40" alt="Логотип Pink.">
           </a>
 
-          <button class="page-header__button-toogle page-header__button-toogle--js" type="button">
-            <span class="page-header__button-closed visually-hidden">
+          <button class="page-header__button-toogle js-burger-button" type="button">
+            <span class="visually-hidden">
               Отвечает за открытие и закрытие меню.
             </span>
           </button>
         </div>
 
-        <nav class="nav page-header__nav page-header__nav--js page-header__nav--closed">
+        <nav class="nav page-header__nav page-header__nav--closed">
           <ul class="nav__list">
             <li class="nav__item">
               <a class="nav__link {{ 'nav__link--current' if page == 'index' }}" href="index.html" {{ 'aria-current="page"' if page == 'index' }}>
@@ -57,7 +57,7 @@
       {% block main %}{% endblock %}
     </main>
 
-    <footer class="page-footer page__footer">
+    <footer class="page-footer page__footer page-footer__form-position">
       <a class="page-footer__logo" href="index.html" {{ 'aria-current="page"' if page == 'index' }}>
         <span class="visually-hidden">
           Логотип Pink.

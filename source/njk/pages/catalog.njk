@@ -4,69 +4,70 @@
 
 {% block main %}
   <section class="content page-main__content">
-    <header class="content__header">
+    <header class="content__header content__header--catalog">
       <h1 class="content__title">
-        Фотографии пользователей
+        Фотографии
+        {# PP #}
+        <br>
+        пользователей
       </h1>
     </header>
 
-    <b class="content__subtitle">
+    <b class="content__subtitle content__subtitle--catalog">
       Взгляните на фотографии, которые выкладывают пользователи!
       <br>
       Видите, как не хватает ваших?
     </b>
 
-    <ul class="photo-list content__photo-list">
-      <li class="photo-list__photo-item">
-        <article class="photo-cards photo-list__photo-cards">
-          <h2 class="visually-hidden">
-            Фотография пользователя-1.
-          </h2>
+    <article class="photo-cards content__photo-cards photo-cards--panorama">
+      <h2 class="visually-hidden">
+        Фотография пользователя-1.
+      </h2>
 
-          <figure class="photo-cards__block photo-cards__block--panorama">
+      <figure class="photo-cards__block photo-cards__block--panorama">
 
-            <p class="photo-cards__panorama">
-              Панорама дня
+        <p class="photo-cards__panorama">
+          Панорама дня
+        </p>
+
+        <img class="photo-cards__photo photo-cards__photo--panorama" src="img/panorama-mobile.jpg" alt="Панорама гор и леса.">
+
+        <figcaption class="photo-cards__photo-content photo-cards__photo-content--panorama">
+          <blockquote class="photo-cards__quote photo-cards__quote--panorama">
+            <p class="photo-cards__cite">
+              <cite class="photo-cards__author">
+                Анна
+              </cite>
+
+              <time class="photo-cards__time" datetime="2022-04-09T23:46:01">
+                (5 минут назад)
+              </time>
             </p>
 
-            <img class="photo-cards__photo photo-cards__photo--panorama" src="img/panorama-mobile.jpg" alt="Панорама гор и леса.">
+            <p class="photo-cards__description photo-cards__description--panorama">
+              Прыгать или нет? Напишите в комментарии свой совет и
+              <br>
+              смотрите прямую трансляцию в перископе, задавайте свои вопросы!
+            </p>
 
-            <figcaption class="photo-cards__photo-content photo-cards__photo-content--panorama">
-              <blockquote class="photo-cards__quote">
-                <p class="photo-cards__cite">
-                  <cite class="photo-cards__author">
-                    Анна
-                  </cite>
+            <form class="photo-cards__likes-form photo-cards__likes-form--panorama" action="https://echo.htmlacademy.ru" method="post">
+              <button class="photo-cards__button photo-cards__button--panorama" type="submit" name="userID" value="1">
+                <span class="visually-hidden">
+                  Поставить лайк.
+                </span>
+              </button>
 
-                  <time class="photo-cards__time" datetime="2022-04-09T23:46:01">
-                    (5 минут назад)
-                  </time>
-                </p>
+              <p class="photo-cards__likes">
+                Нравится: 215
+              </p>
+              <input type="hidden" name="photo" value="Панорама гор и леса">
+            </form>
+          </blockquote>
+        </figcaption>
+      </figure>
+    </article>
 
-                <p class="photo-cards__description">
-                  Прыгать или нет? Напишите в комментарии свой совет и
-                  <br>
-                  смотрите прямую трансляцию в перископе, задавайте свои вопросы!
-                </p>
-
-                <form class="photo-cards__likes-form" action="https://echo.htmlacademy.ru" method="post">
-                  <button class="photo-cards__button" type="submit" name="userID" value="1">
-                    <span class="visually-hidden">
-                      Поставить лайк.
-                    </span>
-                  </button>
-
-                  <p class="photo-cards__likes">
-                    Нравится: 215
-                  </p>
-                  <input type="hidden" name="photo" value="Панорама гор и леса">
-                </form>
-              </blockquote>
-            </figcaption>
-          </figure>
-        </article>
-      </li>
-
+    <ul class="photo-list content__photo-list">
       <li class="content__photo-item">
         <article class="photo-cards content__photo-cards">
           <h2 class="visually-hidden">
@@ -77,19 +78,21 @@
             <img class="photo-cards__photo" src="img/photo-1-mobile.jpg" width="" height="" alt="Камера на триноге фоткает машину.">
             <figcaption class="photo-cards__photo-content">
               <blockquote class="photo-cards__quote">
-                <p class="photo-cards__cite">
-                  <cite class="photo-cards__author">
-                    Левон
-                  </cite>
+                <div>
+                  <p class="photo-cards__cite">
+                    <cite class="photo-cards__author">
+                      Левон
+                    </cite>
 
-                  <time class="photo-cards__time" datetime="2022-04-09T23:46:01">
-                    (5 часов назад)
-                  </time>
-                </p>
+                    <time class="photo-cards__time" datetime="2022-04-09T23:46:01">
+                      (5 часов назад)
+                    </time>
+                  </p>
 
-                <p class="photo-cards__description">
-                  Вчера он на луну летал, сегодня в руки к нам попал.
-                </p>
+                  <p class="photo-cards__description">
+                    Вчера он на луну летал, сегодня в руки к нам попал.
+                  </p>
+                </div>
 
                 <form class="photo-cards__likes-form" action="https://echo.htmlacademy.ru" method="post">
                   <button class="photo-cards__button" type="submit" name="userID" value="1">
@@ -119,18 +122,20 @@
             <img class="photo-cards__photo" src="img/photo-2-mobile.jpg" width="" height="" alt="Барабанная установка.">
             <figcaption class="photo-cards__photo-content">
               <blockquote class="photo-cards__quote">
-                <p class="photo-cards__cite">
-                  <cite class="photo-cards__author">
-                    Антон
-                  </cite>
-                  <time class="photo-cards__time" datetime="2022-04-09T23:46:01">
-                    (12 часов назад)
-                  </time>
-                </p>
+                <div>
+                  <p class="photo-cards__cite">
+                    <cite class="photo-cards__author">
+                      Антон
+                    </cite>
+                    <time class="photo-cards__time" datetime="2022-04-09T23:46:01">
+                      (12 часов назад)
+                    </time>
+                  </p>
 
-                <p class="photo-cards__description">
-                  Соседи будут рады!
-                </p>
+                  <p class="photo-cards__description">
+                    Соседи будут рады!
+                  </p>
+                </div>
 
                 <form class="photo-cards__likes-form" action="https://echo.htmlacademy.ru" method="post">
                   <button class="photo-cards__button" type="submit" name="userID" value="1">
@@ -160,18 +165,21 @@
             <img class="photo-cards__photo" src="img/photo-3-mobile.jpg" width="" height="" alt="Стеклянный потолок с видом на облака.">
             <figcaption class="photo-cards__photo-content">
               <blockquote class="photo-cards__quote">
-                <p class="photo-cards__cite">
-                  <cite class="photo-cards__author">
-                    Борис
-                  </cite>
-                  <time class="photo-cards__time" datetime="2022-04-09T23:46:01">
-                    (20 часов назад)
-                  </time>
-                </p>
 
-                <p class="photo-cards__description">
-                  Здесь могла быть ваша цитата о высоком и вечном.
-                </p>
+                <div>
+                  <p class="photo-cards__cite">
+                    <cite class="photo-cards__author">
+                      Борис
+                    </cite>
+                    <time class="photo-cards__time" datetime="2022-04-09T23:46:01">
+                      (20 часов назад)
+                    </time>
+                  </p>
+
+                  <p class="photo-cards__description">
+                    Здесь могла быть ваша цитата о высоком и вечном.
+                  </p>
+                </div>
 
                 <form class="photo-cards__likes-form" action="https://echo.htmlacademy.ru" method="post">
                   <button class="photo-cards__button" type="submit" name="userID" value="1">
@@ -201,18 +209,21 @@
             <img class="photo-cards__photo" src="img/photo-4-mobile.jpg" width="" height="" alt="Шатер с кубанской бахчёй.">
             <figcaption class="photo-cards__photo-content">
               <blockquote class="photo-cards__quote">
-                <p class="photo-cards__cite">
-                  <cite class="photo-cards__author">
-                    Сергей
-                  </cite>
-                  <time class="photo-cards__time" datetime="2022-04-09T23:46:01">
-                    (25 часов назад)
-                  </time>
-                </p>
 
-                <p class="photo-cards__description">
-                  Самая кубанская в мире!
-                </p>
+                <div>
+                  <p class="photo-cards__cite">
+                    <cite class="photo-cards__author">
+                      Сергей
+                    </cite>
+                    <time class="photo-cards__time" datetime="2022-04-09T23:46:01">
+                      (25 часов назад)
+                    </time>
+                  </p>
+
+                  <p class="photo-cards__description">
+                    Самая кубанская в мире!
+                  </p>
+                </div>
 
                 <form class="photo-cards__likes-form" action="https://echo.htmlacademy.ru" method="post">
                   <button class="photo-cards__button" type="submit" name="userID" value="1">
@@ -242,19 +253,22 @@
             <img class="photo-cards__photo" src="img/photo-5-mobile.jpg" width="" height="" alt="Вид с высокой горы.">
             <figcaption class="photo-cards__photo-content">
               <blockquote class="photo-cards__quote">
-                <p class="photo-cards__cite">
-                  <cite class="photo-cards__author">
-                    Максим
-                  </cite>
 
-                  <time class="photo-cards__time" datetime="2022-04-09T23:46:01">
-                    (40 часов назад)
-                  </time>
-                </p>
+                <div>
+                  <p class="photo-cards__cite">
+                    <cite class="photo-cards__author">
+                      Максим
+                    </cite>
 
-                <p class="photo-cards__description">
-                  Где снег-то?
-                </p>
+                    <time class="photo-cards__time" datetime="2022-04-09T23:46:01">
+                      (40 часов назад)
+                    </time>
+                  </p>
+
+                  <p class="photo-cards__description">
+                    Где снег-то?
+                  </p>
+                </div>
 
                 <form class="photo-cards__likes-form" action="https://echo.htmlacademy.ru" method="post">
                   <button class="photo-cards__button" type="submit" name="userID" value="1">
@@ -284,18 +298,21 @@
             <img class="photo-cards__photo" src="img/photo-6-mobile.jpg" width="" height="" alt="Вид из иллюмината самолета.">
             <figcaption class="photo-cards__photo-content">
               <blockquote class="photo-cards__quote">
-                <p class="photo-cards__cite">
-                  <cite class="photo-cards__author">
-                    Надежда
-                  </cite>
-                  <time class="photo-cards__time" datetime="2022-04-09T23:46:01">
-                    (45 часов назад)
-                  </time>
-                </p>
 
-                <p class="photo-cards__description">
-                  Всем GM и взаимные лайки!
-                </p>
+                <div>
+                  <p class="photo-cards__cite">
+                    <cite class="photo-cards__author">
+                      Надежда
+                    </cite>
+                    <time class="photo-cards__time" datetime="2022-04-09T23:46:01">
+                      (45 часов назад)
+                    </time>
+                  </p>
+
+                  <p class="photo-cards__description">
+                    Всем GM и взаимные лайки!
+                  </p>
+                </div>
 
                 <form class="photo-cards__likes-form" action="https://echo.htmlacademy.ru" method="post">
                   <button class="photo-cards__button" type="submit" name="userID" value="1">
@@ -319,11 +336,11 @@
     <p class="content__subtitle">
       Затмите их всех!
       <br>
-      Выкладывайте все, что накопилось в телефоне!
+      &nbsp;Выкладывайте все, что накопилось в телефоне!
     </p>
   </section>
 
-  <section class="form-post page-main__form-post">
+  <section class="form-post form-post--position">
     <form class="form-post__form" action="https://echo.htmlacademy.ru" method="post">
       <p class="form-post__add">
         <label class="form-post__label">
@@ -338,66 +355,68 @@
         Редактирование фотографии.
       </h2>
 
-      <fieldset class="form-post__fieldset">
-        <legend class="visually-hidden">
-          Фильры.
-        </legend>
+      <div>
+        <fieldset class="form-post__fieldset">
+          <legend class="visually-hidden">
+            Фильры.
+          </legend>
 
-        <p class="form-post__control">
-          <button class="form-post__button-control form-post__button-control--cut" type="submit">
-            <span class="visually-hidden">
-              Переключить на режим обрезать.
-            </span>
+          <p class="form-post__control">
+            <button class="form-post__button-control form-post__button-control--cut" type="submit">
+              <span class="visually-hidden">
+                Переключить на режим обрезать.
+              </span>
+            </button>
+
+            <label class="form-post__label form-post__label--cut">
+              <span class="visually-hidden">
+                Обрезать.
+              </span>
+              <input class="range form-post__range" type="range" name="cut" min="1" max="100" value="85" >
+            </label>
+          </p>
+
+          <p class="form-post__control">
+            <button class="form-post__button-control form-post__button-control--shade" type="submit">
+              <span class="visually-hidden">
+                Переключить на режим оттенок.
+              </span>
+            </button>
+
+            <label class="form-post__label">
+              <span class="visually-hidden">
+                Оттенок.
+              </span>
+              <input class="range form-post__range" type="range" name="shade" min="1" max="100" value="15" >
+            </label>
+          </p>
+
+          <p class="form-post__control">
+            <button class="form-post__button-control form-post__button-control--contrast" type="submit">
+              <span class="visually-hidden">
+                Переключить на режим контраст.
+              </span>
+            </button>
+
+            <label class="form-post__label form-post__label--current-none">
+              <span class="visually-hidden">
+                Контраст.
+              </span>
+              <input class="range form-post__range" type="range" name="contrast" min="1" max="100" value="50" >
+            </label>
+          </p>
+        </fieldset>
+
+        <p class="form-post__button-block">
+          <button class="form-post__button" type="submit">
+            Запостить
           </button>
 
-          <label class="form-post__label ">
-            <span class="visually-hidden">
-              Обрезать.
-            </span>
-            <input class="range form-post__range" type="range" name="cut" min="1" max="100" value="85" >
-          </label>
-        </p>
-
-        <p class="form-post__control">
-          <button class="form-post__button-control form-post__button-control--shade" type="submit">
-            <span class="visually-hidden">
-              Переключить на режим оттенок.
-            </span>
+          <button class="form-post__button form-post__button--reset" type="reset">
+            Отмена
           </button>
-
-          <label class="form-post__label form-post__label--current-none">
-            <span class="visually-hidden">
-              Оттенок.
-            </span>
-            <input class="range form-post__range" type="range" name="shade" min="1" max="100" value="20" >
-          </label>
         </p>
-
-        <p class="form-post__control">
-          <button class="form-post__button-control form-post__button-control--contrast" type="submit">
-            <span class="visually-hidden">
-              Переключить на режим контраст.
-            </span>
-          </button>
-
-          <label class="form-post__label form-post__label--current-none">
-            <span class="visually-hidden">
-              Контраст.
-            </span>
-            <input class="range form-post__range" type="range" name="contrast" min="1" max="100" value="50" >
-          </label>
-        </p>
-      </fieldset>
-
-      <p class="form-post__button-block">
-        <button class="form-post__button" type="submit">
-          Запостить
-        </button>
-
-        <button class="form-post__button form-post__button--reset" type="reset">
-          Отмена
-        </button>
-      </p>
+      </div>
     </form>
   </section>
 {% endblock %}

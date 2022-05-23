@@ -2,6 +2,12 @@
   @media @desktop {
     position: relative;
   }
+
+  &--position {
+    @media @desktop {
+      margin-bottom: 82px;
+    }
+  }
 }
 
 .reviews__list {
@@ -18,17 +24,6 @@
     background-repeat: no-repeat;
     background-position: 50% 20%;
   }
-
-  // &::before {
-  //   @media @desktop {
-  //     content: "";
-  //     position: absolute;
-  //     width: 22px;
-  //     height: 41px;
-  //     mask-image: url("icon-left-arrow");
-  //     mask-repeat: no-repeat;
-  //   }
-  // }
 }
 
 .reviews__quote {
@@ -99,5 +94,69 @@
 
   @media @desktop {
     display: none;
+  }
+}
+
+.reviews__button-arrow {
+  display: none;
+
+  @media @desktop {
+    position: absolute;
+    top: 42%;
+    display: block;
+    width: 41px;
+    height: 41px;
+    border: none;
+    background-color: transparent;
+    color: var(--color-asphalt-30);
+  }
+
+  &--right {
+    @media @desktop {
+      right: 9%;
+      top: 50%;
+    }
+  }
+
+  &--left {
+    @media @desktop {
+      top: 50%;
+      left: 11%;
+    }
+  }
+
+  &::before {
+    @media @desktop {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 41px;
+      height: 41px;
+      background-color: currentColor;
+      mask-repeat: no-repeat;
+      cursor: pointer;
+    }
+  }
+
+  &--left::before {
+    @media @desktop {
+      mask-image: url("../img/icon-left-arrow.svg");
+    }
+  }
+
+  &--right::before {
+    @media @desktop {
+      mask-image: url("../img/icon-right-arrow.svg");
+    }
+  }
+
+  &:hover {
+    color: var(--color-asphalt-60);
+  }
+
+  &:active {
+    color: var(--color-asphalt-10);
   }
 }

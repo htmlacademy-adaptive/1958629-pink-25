@@ -3,19 +3,47 @@
   padding: 38px 20px 47px;
   border: none;
   background-color: var(--color-lightgrey);
+
+  @media @tablet-desktop {
+    padding: 7px 58px 57px;
+    margin: 0 20px;
+    background-color: transparent;
+    border: 2px solid var(--color-grey);
+    border-radius: 4px;
+  }
+}
+
+.checkboxes--position {
+  @media @desktop {
+    grid-column: 1 / -1;
+  }
 }
 
 .checkboxes__legend {
   margin-bottom: 27px;
+
+  @media @tablet-desktop {
+    margin-bottom: 36px;
+  }
 }
 
 .checkboxes__position {
   margin: 0 0 30px;
+
+  br {
+    @media @tablet-desktop {
+      display: none;
+    }
+  }
+
+  @media @tablet-desktop {
+    margin: 0 auto;
+    width: 437px;
+  }
 }
 
 .checkboxes__list {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: 39px;
   margin: 0;
   padding: 0;
@@ -23,6 +51,10 @@
 
   &--position {
     gap: 32px;
+
+    @media @desktop {
+      padding-left: 46px;
+    }
   }
 }
 
@@ -90,6 +122,10 @@
 
   &--radio {
     padding-left: 46px;
+
+    @media @tablet-desktop {
+      padding-left: 37px;
+    }
 
     &::before {
       top: 8px;

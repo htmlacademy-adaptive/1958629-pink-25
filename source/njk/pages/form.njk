@@ -10,81 +10,87 @@
       </h1>
     </header>
 
-    <b class="content__subtitle">
+    <p class="content__subtitle">
       Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
-    </b>
+      <span class="content__addition-text">
+        Пожалуйста, заполните форму ниже:
+      </span>
+    </p>
 
     <form class="form content__form-content" action="https://echo.htmlacademy.ru" method="post">
-      <fieldset class="fields">
+      <fieldset class="fields form__fields-fio">
         <legend class="visually-hidden">
           Фио.
         </legend>
-        <p class="fields__group">
-          <label class="fields__label">
+        <p class="fields__group fields__group--fio">
+          <label class="fields__label" for="last_name">
             Фамилия:
-            <input class="fields__input" type="text" name="name[]" placeholder="Укажите фамилию *">
           </label>
+
+          <input class="fields__input" id="last_name" type="text" name="name[]" placeholder="Укажите фамилию *">
         </p>
 
-        <p class="fields__group">
-          <label class="fields__label">
+        <p class="fields__group fields__group--fio">
+          <label class="fields__label" for="first_name">
             Имя:
-            <input class="fields__input" type="text" name="name[]" placeholder="Введите ваше имя *">
           </label>
+
+          <input class="fields__input" id="first_name" type="text" name="name[]" placeholder="Введите ваше имя *">
         </p>
 
-        <p class="fields__group">
-          <label class="fields__label">
+        <p class="fields__group fields__group--fio">
+          <label class="fields__label" for="middle_name">
             Отчество:
-            <input class="fields__input" type="text" name="name[]" placeholder="Ну и отчество тоже">
           </label>
+
+          <input class="fields__input" id="middle_name" type="text" name="name[]" placeholder="Ну и отчество тоже">
         </p>
       </fieldset>
 
-      <fieldset class="checkboxes form__checkboxes">
+      <fieldset class="checkboxes form__checkboxes checkboxes--position">
         <legend class="legend checkboxes__position">
           Ваши безбашенные
           <br>
-          достижения в путешествии
+          &nbsp;достижения в путешествии
         </legend>
 
-        <ul class="checkboxes__list">
-          <li class="checkboxes__group">
+        <ul class="travel checkboxes__list">
+          <li class="checkboxes__group travel__group">
             <label class="checkboxes__label">
               <input class="checkboxes__input checkboxes__input--checkbox" type="checkbox" name="event[]" checked>
               Сделал селфи с акулой
             </label>
           </li>
 
-          <li class="checkboxes__group">
+          <li class="checkboxes__group travel__group">
             <label class="checkboxes__label">
               <input class="checkboxes__input checkboxes__input--checkbox" type="checkbox" name="event[]" checked>
               Обгорел на пляже
             </label>
           </li>
 
-          <li class="checkboxes__group">
+          <li class="checkboxes__group travel__group">
             <label class="checkboxes__label">
               <input class="checkboxes__input checkboxes__input--checkbox" type="checkbox" name="event[]">
               Видел Чака Норриса
             </label>
           </li>
 
-          <li class="checkboxes__group">
+          <li class="checkboxes__group travel__group">
             <label class="checkboxes__label">
               <input class="checkboxes__input checkboxes__input--checkbox" type="checkbox" name="event[]">
               Накупил сувениров
             </label>
           </li>
 
-          <li class="checkboxes__group">
+          <li class="checkboxes__group travel__group">
             <label class="checkboxes__label">
               <input class="checkboxes__input checkboxes__input--checkbox" type="checkbox" name="event[]" checked>
               Удержал башню
             </label>
           </li>
 
-          <li class="checkboxes__group">
+          <li class="checkboxes__group travel__group">
             <label class="checkboxes__label">
               <input class="checkboxes__input checkboxes__input--checkbox" type="checkbox" name="event[]">
               Разгромил отель
@@ -93,27 +99,29 @@
         </ul>
       </fieldset>
 
-      <fieldset class="fields form__fields">
-        <legend class="visually-hidden">
+      <fieldset class="fields form__fields fields--contacts">
+        <legend class="legend fields__none-text">
           Контактная информация
         </legend>
 
-        <p class="fields__group">
-          <label class="fields__label">
-              Номер телефона
-            <input class="fields__input fields__input--info" type="tel" name="tel" placeholder="Номер, пожалуйста">
+        <p class="fields__group fields__group-position fields__group-position--phone">
+          <label class="fields__label fields__label--position" for="phone">
+            Номер телефона
           </label>
+
+          <input class="fields__input fields__input--info" id="phone" type="tel" name="tel" placeholder="Номер, пожалуйста">
         </p>
 
-        <p class="fields__group">
-          <label class="fields__label">
+        <p class="fields__group fields__group-position fields__group-position--email">
+          <label class="fields__label fields__label--position" for="mail">
             Адрес почты
-            <input class="fields__input fields__input--info" type="email" name="mail" placeholder="Введите почту *">
           </label>
+
+          <input class="fields__input fields__input--info" id="mail" type="email" name="mail" placeholder="Введите почту *">
         </p>
       </fieldset>
 
-      <fieldset class="checkboxes form__checkboxes">
+      <fieldset class="checkboxes form__checkboxes-app">
         <legend class="legend checkboxes__legend">
           С каким приложением путешествовали?
         </legend>
@@ -143,7 +151,7 @@
       </fieldset>
 
       <fieldset class="fields form__fields form__fields--position">
-        <legend class="legend fields__legend">
+        <legend class="legend fields__legend legend--aligin">
           Опишите свои эмоции
         </legend>
 
@@ -156,7 +164,7 @@
         </button>
 
         <p class="form__warning">
-          <span class="pink-star">*</span> — обязательные поля
+          <span class="form__pink-star">*</span> — обязательные <span class="form__warning-text"> для заполнения</span> поля
         </p>
       </div>
     </form>
