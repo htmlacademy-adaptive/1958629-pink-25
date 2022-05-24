@@ -10,7 +10,7 @@
       </h1>
 
       <b class="promo__lead">
-        Взгляните на жизнь иначе!
+        Взгляните на&nbsp;жизнь иначе!
       </b>
 
       <img class="promo__img-phone" src="img/hand-phone.png" alt="Телефон с запущенным приложением Pink в руке.">
@@ -60,58 +60,62 @@
     </b>
 
     <b class="features__lead">
-      Нам есть, что вам предложить!
+      Нам есть, что вам
+      <br>
+      предложить!
     </b>
 
-    <dl class="features__list">
-      <div class="features__item features__item--1">
-        <dt class="features__title">
-          Поднимает настроение
-        </dt>
-        <dd class="features__description">
-          Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
-        </dd>
-      </div>
+    <div class="features__wrapper">
+      <dl class="features__list">
+        <div class="features__item features__item--1">
+          <dt class="features__title">
+            Поднимает настроение
+          </dt>
+          <dd class="features__description">
+            Приложение позволит вам победить осеннюю хандру и&nbsp;депрессию буквально в несколько кликов!
+          </dd>
+        </div>
 
-      <div class="features__item features__item--2">
-        <dt class="features__title">
-          Меняет мир вокруг
-        </dt>
-        <dd class="features__description">
-          Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
-        </dd>
-      </div>
+        <div class="features__item features__item--2">
+          <dt class="features__title">
+            Меняет мир вокруг
+          </dt>
+          <dd class="features__description">
+            Сделайте снимок и украсьте&nbsp;его смайликом или&nbsp;текстовой подписью, чтобы усилить эффект
+          </dd>
+        </div>
 
-      <div class="features__item features__item--3">
-        <dt class="features__title">
-          Заводит новых друзей
-        </dt>
-        <dd class="features__description features__description--phone">
-          Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
-        </dd>
-      </div>
-    </dl>
+        <div class="features__item features__item--3">
+          <dt class="features__title">
+            Заводит новых друзей
+          </dt>
+          <dd class="features__description features__description--phone">
+            Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и&nbsp;заводите новых
+          </dd>
+        </div>
+      </dl>
+    </div>
   </section>
 
   <section class="announce page-main__announce">
-    <h2 class="announce__headline">
-      Эффект
-      <br>
-      на 24 часа!
-    </h2>
+    <div class="announce__wrapper">
+      <h2 class="announce__headline">
+        Эффект&nbsp;<br>на 24 часа!
+      </h2>
 
-    <p class="announce__desc">
-      Британские ученые провели исследования
-      и доказали, что положительный эффект
-      от использования приложения длится целые сутки!
-    </p>
+      <p class="announce__desc">
+        Британские ученые провели исследования
+        и&nbsp;доказали, что&nbsp;положительный эффект
+        от&nbsp;использования приложения длится целые сутки!
+      </p>
 
-    <a class="announce__linck" href="#!" >
-      Узнать больше об исследовании
-    </a>
+      <a class="announce__link" href="#!" >
+        Узнать больше об исследовании
+      </a>
+    </div>
   </section>
 
-  <section class="reviews page-main__reviews">
+  <section class="reviews page-main__reviews reviews--position">
     <h2 class="visually-hidden">
       Отзывы.
     </h2>
@@ -159,6 +163,18 @@
         </button>
       </li>
     </ul>
+
+    <button class="reviews__button-arrow reviews__button-arrow--left" type="button">
+      <span class="visually-hidden">
+        Открыть предыдущий отзыв.
+      </span>
+    </button>
+
+    <button class="reviews__button-arrow reviews__button-arrow--right" type="button">
+      <span class="visually-hidden">
+        Открыть следующий отзыв.
+      </span>
+    </button>
   </section>
 
   <section class="tariffs page-main__tariffs">
@@ -204,7 +220,7 @@
 
         <tbody>
           <tr class="tariffs__functions">
-            <td class="tariffs__function tariffs__function--none">
+            <td class="tariffs__function tariffs__function--mobile-none">
               Розовый фильтр
             </td>
 
@@ -246,7 +262,7 @@
           </tr>
 
           <tr class="tariffs__functions">
-            <td class="tariffs__function tariffs__function--none">
+            <td class="tariffs__function tariffs__function--mobile-none">
               Смайлики
             </td>
 
@@ -288,7 +304,7 @@
           </tr>
 
           <tr class="tariffs__functions">
-            <td class="tariffs__function tariffs__function--none">
+            <td class="tariffs__function tariffs__function--mobile-none">
               Комментарии
             </td>
 
@@ -317,7 +333,7 @@
             </td>
 
             <td class="tariffs__function">
-             <span class="tariffs__alter">
+              <span class="tariffs__alter">
                 Комментарии
               </span>
 
@@ -389,7 +405,7 @@
         </dd>
       </div>
 
-      <div class="contacts__wrapper contacts__wrapper--center">
+      <div class="contacts__wrapper contacts__wrapper--full-width">
         <dt class="contacts-list__item">
           Приезжайте в гости:
         </dt>

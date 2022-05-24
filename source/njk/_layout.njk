@@ -8,59 +8,61 @@
   </head>
 
   <body class="page">
-    <header class="page-header page__header">
-      <div class="page-header__position">
-        <a class="logo page-header__logo" href="index.html" {{ 'aria-current="page"' if page == 'index' }}>
-          <img class="logo__image-pink" src="img/logo-pink-white.svg" width="74" height="23" alt="Логотип Pink.">
+    <header class="page-header page__header js-page-header">
+      <div class="page-header__wrapper">
+        <div class="page-header__position page-header__position--js">
+          <a class="logo page-header__logo" href="index.html" {{ 'aria-current="page"' if page == 'index' }}>
+            <img class="logo__image-pink" src="img/logo-pink-white.svg" width="74" height="23" alt="Логотип Pink.">
 
-          <img class="logo__image-variables" src="img/icon-logo-white.svg" width="145" height="40" alt="Логотип Pink.">
-        </a>
+            <img class="logo__image-variables" src="img/icon-logo-white.svg" width="145" height="40" alt="Логотип Pink.">
+          </a>
 
-        <button class="page-header__button-toogle" type="button">
-          <span class="visually-hidden">
-            Отвечает за открытие и закрытие меню.
-          </span>
-        </button>
+          <button class="page-header__button-toogle js-burger-button" type="button">
+            <span class="visually-hidden">
+              Отвечает за открытие и закрытие меню.
+            </span>
+          </button>
+        </div>
+
+        <nav class="nav page-header__nav page-header__nav--closed">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link {{ 'nav__link--current' if page == 'index' }}" href="index.html" {{ 'aria-current="page"' if page == 'index' }}>
+                Главная
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a class="nav__link" href="catalog.html">
+                Фотографии
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a class="nav__link" href="form.html">
+                Конкурс
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a class="nav__link" href="#!">
+                HTML Academy
+              </a>
+            </li>
+          </ul>
+        </nav>
       </div>
-
-      <nav class="nav page-header__nav">
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a class="nav__link {{ 'nav__link--current' if page == 'index' }}" href="index.html" {{ 'aria-current="page"' if page == 'index' }}>
-              Главная
-            </a>
-          </li>
-
-          <li class="nav__item">
-            <a class="nav__link" href="catalog.html">
-              Фотографии
-            </a>
-          </li>
-
-          <li class="nav__item">
-            <a class="nav__link" href="form.html">
-              Конкурс
-            </a>
-          </li>
-
-          <li class="nav__item">
-            <a class="nav__link" href="#!">
-              HTML Academy
-            </a>
-          </li>
-        </ul>
-      </nav>
     </header>
     <main class="page-main page__main">
       {% block main %}{% endblock %}
     </main>
 
-    <footer class="page-footer page__footer">
+    <footer class="page-footer page__footer page-footer__form-position">
       <a class="page-footer__logo" href="index.html" {{ 'aria-current="page"' if page == 'index' }}>
         <span class="visually-hidden">
           Логотип Pink.
         </span>
-        {# <img class="logo__image" src="img/logo-pink.svg" alt="Логотип Pink."> #}
+        <img class="page-footer__logo-pink" src="img/logo-pink.svg" width="145" height="40" alt="Логотип Pink.">
       </a>
 
       <ul class="social-list page-footer__social-list">
@@ -92,9 +94,12 @@
       <div>
         <a class="logo-dev page-footer__dev-link" href="https://htmlacademy.ru/intensive/adaptive">
           Разработано
-          {# <img class="logo-dev__image" src="img/logo-html-academy.svg" alt="Сайт академии HTML Academy."> #}
-          <span class="logo-dev__image">
-          </span>
+          {# <img class="logo-dev__image" src="img/logo-html-academy.svg" width="27" height="34" alt="Сайт академии HTML Academy."> #}
+          <p class="logo-dev__image">
+            <span class="visually-hidden">
+              Логотип HTML Academy.
+            </span>
+          </p>
         </a>
       </div>
     </footer>
@@ -107,6 +112,6 @@
 
     <script src="https://efiand.github.io/pineglade-pp/pineglade-pp.min.js"></script>
 
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
