@@ -1,15 +1,8 @@
-let navMain = document.querySelector('.main-nav');
-let navToggle = document.querySelector('.main-nav__toggle');
+const navToggle = document.querySelector('.js-burger-button');
+const header = document.querySelector('.js-page-header');
 
-navMain.classList.remove('main-nav--nojs');
+header.classList.add('page-header--js');
 
-navToggle.addEventListener('click', function () {
-  if (navMain.classList.contains('main-nav--closed')) {
-    navMain.classList.remove('main-nav--closed');
-    navMain.classList.add('main-nav--opened');
-  } else {
-    navMain.classList.add('main-nav--closed');
-    navMain.classList.remove('main-nav--opened');
-  }
+navToggle.addEventListener('click', () => {
+  header.classList.toggle('page-header--opened');
 });
-

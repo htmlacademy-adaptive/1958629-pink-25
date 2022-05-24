@@ -1,5 +1,13 @@
 .features {
   padding: 40px 20px 41px;
+
+  @media @tablet-desktop {
+    padding-top: 46px;
+  }
+
+  @media @desktop {
+    padding: 62px 0 0;
+  }
 }
 
 .features__lead {
@@ -13,18 +21,45 @@
   @media @tablet-desktop {
     font-size: 40px;
     line-height: 54px;
+    padding: 0 16px;
+  }
+
+  &:last-of-type {
+    @media @tablet-desktop {
+      padding-bottom: 28px;
+    }
+
+    @media @desktop {
+      padding-bottom: 51px;
+    }
+  }
+
+  @media @desktop {
+    font-size: 50px;
+    line-height: 68px;
   }
 }
 
-.features__item {
-  @media @tablet-desktop {
-    margin: 34px 0 0 310px;
-    text-align: start;
+.features__wrapper {
+  background-color: var(--color-lightgrey);
+
+  @media @mobile-tablet {
+    background-color: transparent;
+  }
+
+  &::before {
+    @media @desktop {
+      content: "";
+      margin: 0 -20px -5px;
+      display: block;
+      height: 101px;
+      width: 100%;
+      background-image: var(--skew-gradient);
+    }
   }
 }
 
 .features__list {
-  position: relative;
   margin: 2px -20px 0;
   padding: 0 20px;
   text-align: center;
@@ -32,7 +67,11 @@
 
   @media @tablet-desktop {
     min-height: 370px;
-    padding-bottom: 49px;
+    padding-bottom: 9px;
+  }
+
+  @media @tablet {
+    position: relative;
   }
 
   &::before {
@@ -41,6 +80,94 @@
     display: block;
     height: 32px;
     background-image: var(--skew-gradient);
+
+    @media @tablet {
+      height: 55px;
+      margin-bottom: 0;
+    }
+
+    @media @desktop {
+      position: absolute;
+      background-color: transparent;
+    }
+  }
+
+  @media @desktop {
+    position: relative;
+    display: grid;
+    align-items: end;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px 20px;
+    width: 940px;
+    min-height: 501px;
+    margin: -95px auto 0;
+    background-color: transparent;
+  }
+}
+
+.features__item {
+  @media @tablet-desktop {
+    margin: 21px 0 35px 310px;
+    text-align: left;
+  }
+
+  @media @desktop {
+    position: relative;
+    margin: 356px 0 0;
+    text-align: center;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 0;
+
+    @media @desktop {
+      position: absolute;
+      left: 0;
+      top: -356px;
+      width: 306px;
+      height: 301px;
+      margin: 0 0 20px;
+    }
+  }
+
+  &--1::after {
+    @media @desktop {
+      background-image: url("../img/bg-feature-1.png");
+    }
+  }
+
+  &--2::after {
+    @media @desktop {
+      background-image: url("../img/bg-feature-2.png");
+    }
+  }
+
+  &--3::after {
+    margin: 42px auto 0;
+    height: 277px;
+    width: 157px;
+    background-image: url("../img/bg-feature-3.png");
+
+    @media @tablet {
+      position: absolute;
+      bottom: 0;
+      left: 20px;
+      width: 269px;
+      height: 482px;
+    }
+
+    @media @desktop {
+      left: 0;
+      right: 17px;
+      margin: 0;
+      width: 306px;
+      height: 301px;
+      background-image: url("../img/bg-feature-3-desktop.png");
+    }
   }
 }
 
@@ -50,29 +177,28 @@
   line-height: 24px;
   font-size: 18px;
   color: var(--color-black);
+
+  @media @desktop {
+    margin-bottom: 23px;
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  &:last-of-type {
+    @media @desktop {
+      padding: 0 35px;
+    }
+  }
 }
 
 .features__description {
   margin: 0 0 32px;
   font-weight: 400;
   line-height: 24px;
-}
 
-.features__item--3::after {
-  content: "";
-  display: block;
-  margin: 42px auto 0;
-  height: 277px;
-  width: 157px;
-  background-repeat: no-repeat;
-  background-image: url("../img/bg-feature-3.png");
-  background-size: cover;
-
-  @media @tablet-desktop {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 266px;
-    height: 482px;
+  @media @desktop {
+    font-size: 18px;
+    line-height: 30px;
+    padding: 0 20px;
   }
 }

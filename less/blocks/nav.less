@@ -1,15 +1,24 @@
 .nav {
-  display: block;
   position: relative;
   background-color: var(--color-asphalt);
   padding: 0;
   margin: 0;
   z-index: 1;
+
+  @media @desktop {
+    display: inline-block;
+    background-color: transparent;
+  }
 }
 
 .nav__list {
   margin: 0;
   padding: 0;
+
+  @media @desktop {
+    display: flex;
+    gap: 20px;
+  }
 }
 
 .nav__link {
@@ -31,12 +40,29 @@
   &:active {
     color: var(--color-pink-30);
   }
+
+  @media @desktop {
+    border: none;
+    min-width: 135px;
+    padding: 5px 10px;
+    line-height: 18px;
+    font-weight: 400;
+    text-transform: none;
+  }
 }
 
 .nav__item {
   border-top: 1px solid var(--color-black);
-}
 
-.nav__item:last-child {
-  border-bottom: 1px solid var(--color-black);
+  @media @desktop {
+    border: none;
+  }
+
+  &:last-child {
+    border-bottom: 1px solid var(--color-black);
+
+    @media @desktop {
+      border: none;
+    }
+  }
 }
