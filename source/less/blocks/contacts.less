@@ -11,29 +11,16 @@
   }
 }
 
-.contacts-list {
-  padding: 0;
-  margin: 0;
-
-  @media @tablet-desktop {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 26px 20px;
-  }
-
-  @media @desktop {
-    grid-template-columns: repeat(3, 1fr);
-    width: 940px;
-    margin: 0 auto;
-  }
-}
-
 .contacts__tagline {
   margin: 0 0 33px;
   text-align: center;
   font-size: 24px;
   line-height: 29px;
   font-weight: 300;
+
+  @media @tablet {
+    margin-bottom: 34px;
+  }
 
   @media @tablet-desktop {
     font-size: 40px;
@@ -47,54 +34,37 @@
   }
 }
 
-.contacts__wrapper--full-width {
-  &:nth-child(odd) {
-    @media @tablet {
-      grid-column: 1 / -1;
+.contacts__wrapper {
+  &:last-child {
+    @media @mobile {
+      padding-top: 4px; // PP
+    }
+
+    &:nth-child(odd) {
+      @media @tablet {
+        grid-column: 1 / -1;
+      }
+    }
+
+    &:nth-child(3n + 1) {
+      @media @desktop {
+        grid-column: 1 / -1;
+      }
     }
   }
 
-  &:nth-child(3n + 1) {
+  // PP
+  &:nth-child(2) {
     @media @desktop {
-      grid-column: 1 / -1;
+      order: 1;
     }
   }
-}
 
-.contacts-list__item {
-  text-align: center;
-  font-size: 18px;
-  line-height: 25px;
-  font-weight: 700;
-
-  @media @desktop {
-    margin-bottom: 21px;
-  }
-}
-
-.contacts-list__description {
-  margin: 0 0 19px;
-}
-
-.contacts-list__link {
-  display: block;
-  text-align: center;
-  font-size: 24px;
-  line-height: 33px;
-  font-weight: 300;
-  color: var(--color-pink);
-  text-decoration: none;
-  transition: color, 0.2s ease-in-out;
-
-  &:hover {
-    text-decoration: underline;
-    color: var(--color-asphalt);
-  }
-
-  &:active {
-    opacity: 0.3;
-    text-decoration: none;
-    color: var(--color-pink);
+  // Компенсация PP
+  &:nth-child(n + 4) {
+    @media @desktop {
+      order: 2;
+    }
   }
 }
 
@@ -108,6 +78,15 @@
 
   @media @retina {
     background-image: url("../img/map@2x.jpg");
+    background-size: 100% auto;
+  }
+
+  @media @tablet {
+    margin-top: 2px;
+  }
+
+  @media @desktop {
+    margin: 3px -20px -4px;
   }
 
   &::before {
@@ -145,7 +124,7 @@
   }
 
   @media @desktop {
-    height: 489px;
+    height: 500px;
     background-image: url("../img/map-desktop.jpg");
 
     @media @retina {

@@ -64,7 +64,6 @@
     background-color: currentColor;
     mask-image: url("../img/icon-pink.svg");
     mask-repeat: no-repeat;
-    transition: color 0.2s ease-in-out;
 
     @media @tablet-desktop {
       width: 150px;
@@ -78,7 +77,7 @@
     }
   }
 
-  &:hover {
+  &:hover:not(:active) {
     color: var(--color-pink);
 
     picture {

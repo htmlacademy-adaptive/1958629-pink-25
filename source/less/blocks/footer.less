@@ -46,7 +46,7 @@
   &::before {
     content: "";
     position: absolute;
-    left: calc(50% - 2px);
+    right: 0;
     top: 42%;
     background-color: currentColor;
     width: 74px;
@@ -55,12 +55,7 @@
     mask-repeat: no-repeat;
 
     @media @tablet-desktop {
-      left: 49%;
       top: 19%;
-    }
-
-    @media @desktop {
-      left: 50%;
     }
   }
 
