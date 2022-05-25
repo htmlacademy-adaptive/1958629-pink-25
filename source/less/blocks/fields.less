@@ -28,6 +28,10 @@
 .fields--contacts {
   padding-bottom: 21px;
 
+  @media @mobile {
+    padding-bottom: 26px;
+  }
+
   @media @tablet-desktop {
     order: -1;
     margin: 0 20px;
@@ -123,6 +127,10 @@
   @media @tablet-desktop {
     margin: 10px 0 0 19px;
   }
+
+  @media @desktop {
+    margin-top: 6px;
+  }
 }
 
 .fields__input {
@@ -160,13 +168,19 @@
 }
 
 .fields__input--info {
-  margin: 0 0 22px;
+  margin: 0 0 17px;
 
   @media @tablet-desktop {
     margin: 0;
     padding-bottom: 15px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
+  }
+}
+
+.fields__input--position-info {
+  @media @mobile {
+    margin-top: 6px;
   }
 }
 
