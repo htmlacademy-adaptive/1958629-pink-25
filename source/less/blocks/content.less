@@ -5,16 +5,28 @@
   background-image: url("../img/back-mobile-form.jpg");
   background-size: cover;
 
+  @media @retina {
+    background-image: url("../img/back-mobile-form@2x.jpg");
+  }
+
   @media @tablet {
     background-image: url("../img/back-tablet-form.jpg");
     padding-bottom: 59px;
     margin-top: -110px;
+
+    @media @retina {
+      background-image: url("../img/back-tablet-form@2x.jpg");
+    }
   }
 
   @media @desktop {
     background-image: url("../img/back-desktop-form.jpg");
     padding-bottom: 89px;
     margin-top: -110px;
+
+    @media @retina {
+      background-image: url("../img/back-desktop-form@2x.jpg");
+    }
   }
 
   &--catalog {
@@ -103,7 +115,7 @@
     @media @tablet-desktop {
       padding: 91px 50px 63px;
     }
-
+    // br для PP
     br {
       @media @tablet-desktop {
         display: none;

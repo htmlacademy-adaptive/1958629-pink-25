@@ -5,6 +5,10 @@
     <title>HTML Academy: Пинк &gt; {{ title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link type="image/png" href="img/favicons/favicon-32x32.png" rel="icon" sizes="32x32">
+    <link type="image/svg+xml" href="img/favicons/favicon-32x32.svg" rel="icon">
+    <link href="img/favicons/favicon-apple.png" rel="apple-touch-icon">
+    <link href="favicons.webmanifest" rel="manifest">
   </head>
 
   <body class="page">
@@ -12,9 +16,11 @@
       <div class="page-header__wrapper">
         <div class="page-header__position page-header__position--js">
           <a class="logo page-header__logo" href="index.html" {{ 'aria-current="page"' if page == 'index' }}>
-            <img class="logo__image-pink" src="img/logo-pink-white.svg" width="74" height="23" alt="Логотип Pink.">
-
-            <img class="logo__image-variables" src="img/icon-logo-white.svg" width="145" height="40" alt="Логотип Pink.">
+            <picture>
+              <source media="(min-width: 980px)" srcset="img/icon-logo-white-desktop.svg">
+              <source media="(min-width: 660px)" srcset="img/icon-logo-white.svg">
+              <img class="logo__image-pink" src="img/icon-pink.svg" alt="Логотип Pink.">
+            </picture>
           </a>
 
           <button class="page-header__button-toogle js-burger-button" type="button">
@@ -33,13 +39,13 @@
             </li>
 
             <li class="nav__item">
-              <a class="nav__link" href="catalog.html">
+              <a class="nav__link {{ 'nav__link--current' if page == 'catalog' }}" href="catalog.html" {{ 'aria-current="page"' if page == 'catalog' }}>
                 Фотографии
               </a>
             </li>
 
             <li class="nav__item">
-              <a class="nav__link" href="form.html">
+              <a class="nav__link {{ 'nav__link--current' if page == 'form' }}" href="form.html" {{ 'aria-current="page"' if page == 'form' }}>
                 Конкурс
               </a>
             </li>
@@ -57,12 +63,12 @@
       {% block main %}{% endblock %}
     </main>
 
-    <footer class="page-footer page__footer page-footer__form-position">
+    <footer class="page-footer page-footer--position">
       <a class="page-footer__logo" href="index.html" {{ 'aria-current="page"' if page == 'index' }}>
-        <span class="visually-hidden">
-          Логотип Pink.
-        </span>
-        <img class="page-footer__logo-pink" src="img/logo-pink.svg" width="145" height="40" alt="Логотип Pink.">
+        <picture>
+          <source media="(min-width: 980px)" srcset="img/logo-pink-desktop.svg">
+          <img class="page-footer__logo-pink" src="img/logo-pink.svg" alt="Логотип Pink.">
+        </picture>
       </a>
 
       <ul class="social-list page-footer__social-list">
@@ -94,7 +100,6 @@
       <div>
         <a class="logo-dev page-footer__dev-link" href="https://htmlacademy.ru/intensive/adaptive">
           Разработано
-          {# <img class="logo-dev__image" src="img/logo-html-academy.svg" width="27" height="34" alt="Сайт академии HTML Academy."> #}
           <p class="logo-dev__image">
             <span class="visually-hidden">
               Логотип HTML Academy.
