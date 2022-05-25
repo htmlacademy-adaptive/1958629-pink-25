@@ -137,12 +137,20 @@
   &--1::after {
     @media @desktop {
       background-image: url("../img/bg-feature-1.png");
+
+      @media @retina {
+        background-image: url("../img/bg-feature-1@2x.png");
+      }
     }
   }
 
   &--2::after {
     @media @desktop {
       background-image: url("../img/bg-feature-2.png");
+
+      @media @retina {
+        background-image: url("../img/bg-feature-2@2x.png");
+      }
     }
   }
 
@@ -151,6 +159,10 @@
     height: 277px;
     width: 157px;
     background-image: url("../img/bg-feature-3.png");
+
+    @media @retina {
+      background-image: url("../img/bg-feature-3@2x.png");
+    }
 
     @media @tablet {
       position: absolute;
@@ -167,6 +179,10 @@
       width: 306px;
       height: 301px;
       background-image: url("../img/bg-feature-3-desktop.png");
+
+      @media @retina {
+        background-image: url("../img/bg-feature-3-desktop@2x.png");
+      }
     }
   }
 }

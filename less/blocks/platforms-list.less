@@ -1,8 +1,13 @@
 .platforms-list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   margin: 0;
   padding: 0 0 8px;
+
+  @media @tablet-desktop {
+    width: 220px;
+  }
 }
 
 .platforms-list__link {
