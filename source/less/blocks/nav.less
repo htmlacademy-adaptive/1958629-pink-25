@@ -17,7 +17,8 @@
 
   @media @desktop {
     display: flex;
-    gap: 20px;
+    gap: 80px;
+    padding-right: 19px;
   }
 }
 
@@ -43,11 +44,16 @@
 
   @media @desktop {
     border: none;
-    min-width: 135px;
-    padding: 5px 10px;
+    padding: 12px 0 10px;
     line-height: 18px;
     font-weight: 400;
     text-transform: none;
+  }
+
+  &--current {
+    @media @desktop {
+      border-bottom: 2px solid var(--color-white);
+    }
   }
 }
 

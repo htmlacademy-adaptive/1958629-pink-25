@@ -6,194 +6,194 @@
     margin-top: 14px;
     background-color: transparent;
   }
+}
 
-  &__block {
-    position: relative;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+.photo-cards__block {
+  position: relative;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.photo-cards__photo {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  object-fit: cover;
+
+  @media @tablet-desktop {
+    height: 300px;
   }
 
-  &__photo {
-    display: block;
-    margin: 0 auto;
-    width: 100%;
-    object-fit: cover;
+  @media @desktop {
+    height: 400px;
+  }
 
+  &--panorama {
     @media @tablet-desktop {
-      height: 300px;
+      height: 509px;
+    }
+  }
+}
+
+.photo-cards__panorama {
+  position: absolute;
+  right: 20px;
+  top: 0;
+  padding: 6px 20px;
+  margin: 0;
+  background-color: var(--color-pink);
+  text-transform: uppercase;
+  color: var(--color-white);
+  line-height: 24px;
+  font-size: 12px;
+  font-weight: 700;
+
+  @media @tablet-desktop {
+    top: 57px;
+  }
+
+  @media @desktop {
+    top: 54px;
+    right: 129px;
+  }
+}
+
+.photo-cards__photo-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin: 0;
+
+  &--panorama {
+    margin: 0 20px;
+    background-color: var(--color-lightgrey);
+
+    @media @desktop {
+      margin: 0 auto;
+      width: 940px;
+    }
+  }
+}
+
+.photo-cards__quote {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  margin: 0;
+  padding: 17px 5px 19px 17px;
+  font-family: inherit;
+  line-height: 24px;
+
+  @media @tablet-desktop {
+    padding: 22px 30px 26px;
+  }
+
+  &--panorama {
+    @media @tablet-desktop {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 22px 30px 25px;
     }
 
     @media @desktop {
-      height: 400px;
-    }
-
-    &--panorama {
-      @media @tablet-desktop {
-        height: 509px;
-      }
+      padding-bottom: 23px;
     }
   }
+}
 
-  &__panorama {
-    position: absolute;
-    right: 20px;
-    top: 0;
-    padding: 6px 20px;
-    margin: 0;
-    background-color: var(--color-pink);
-    text-transform: uppercase;
-    color: var(--color-white);
-    line-height: 24px;
-    font-size: 12px;
-    font-weight: 700;
+.photo-cards__cite {
+  margin: 0;
+}
 
+.photo-cards__time {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.photo-cards__description {
+  margin: 0 0 11px;
+  font-weight: 400;
+
+  @media @tablet-desktop {
+    min-height: 48px;
+  }
+  // br для PP
+  br {
     @media @tablet-desktop {
-      top: 57px;
-    }
-
-    @media @desktop {
-      top: 54px;
-      right: 129px;
+      display: none;
     }
   }
 
-  &__photo-content {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    margin: 0;
-
-    &--panorama {
-      margin: 0 20px;
-      background-color: var(--color-lightgrey);
-
-      @media @desktop {
-        margin: 0 auto;
-        width: 940px;
-      }
+  &--panorama {
+    @media @tablet-desktop {
+      order: 3;
+      grid-column: 1/-1;
+      min-height: auto;
+      margin: 0;
     }
   }
+}
 
-  &__quote {
-    display: flex;
-    flex-direction: column;
+.photo-cards__author {
+  font-weight: 700;
+  font-style: normal;
+}
+
+.photo-cards__likes-form {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  @media @tablet-desktop {
+    flex-direction: row-reverse;
     justify-content: space-between;
-    flex: 1;
-    margin: 0;
-    padding: 17px 5px 19px 17px;
-    font-family: inherit;
-    line-height: 24px;
+  }
 
+  &--panorama {
     @media @tablet-desktop {
-      padding: 22px 30px 26px;
-    }
-
-    &--panorama {
-      @media @tablet-desktop {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        padding: 22px 30px 25px;
-      }
-
-      @media @desktop {
-        padding-bottom: 23px;
-      }
+      justify-content: flex-start;
     }
   }
+}
 
-  &__cite {
-    margin: 0;
+.photo-cards__button {
+  padding: 0;
+  margin-right: 18px;
+  border: none;
+  background-color: transparent;
+  color: var(--color-pink);
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 13px;
+    height: 12px;
+    mask-image: url("../img/icon-heart.svg");
+    background-color: currentColor;
   }
 
-  &__time {
-    text-transform: uppercase;
-    font-size: 12px;
-    font-weight: 300;
+  &:hover {
+    opacity: 0.6;
   }
 
-  &__description {
-    margin: 0 0 11px;
-    font-weight: 400;
-
-    @media @tablet-desktop {
-      min-height: 48px;
-    }
-
-    br {
-      @media @tablet-desktop {
-        display: none;
-      }
-    }
-
-    &--panorama {
-      @media @tablet-desktop {
-        order: 3;
-        grid-column: 1/-1;
-        min-height: auto;
-        margin: 0;
-      }
-    }
+  &:active {
+    opacity: 0.3;
   }
 
-  &__author {
-    font-weight: 700;
-    font-style: normal;
+  @media @tablet-desktop {
+    margin-left: 17px;
+    margin-right: 0;
   }
+}
 
-  &__likes-form {
-    display: flex;
-    align-items: center;
-    position: relative;
-
-    @media @tablet-desktop {
-      flex-direction: row-reverse;
-      justify-content: space-between;
-    }
-
-    &--panorama {
-      @media @tablet-desktop {
-        justify-content: flex-start;
-      }
-    }
-  }
-
-  &__button {
-    padding: 0;
-    margin-right: 18px;
-    border: none;
-    background-color: transparent;
-    color: var(--color-pink);
-    cursor: pointer;
-
-    &::before {
-      content: "";
-      display: block;
-      width: 13px;
-      height: 12px;
-      mask-image: url("../img/icon-heart.svg");
-      background-color: currentColor;
-    }
-
-    &:hover {
-      opacity: 0.6;
-    }
-
-    &:active {
-      opacity: 0.3;
-    }
-
-    @media @tablet-desktop {
-      margin-left: 17px;
-      margin-right: 0;
-    }
-  }
-
-  &__likes {
-    margin: 0;
-    font-size: 12px;
-    text-transform: uppercase;
-    color: var(--color-pink);
-  }
+.photo-cards__likes {
+  margin: 0;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: var(--color-pink);
 }

@@ -52,6 +52,45 @@
   }
 }
 
+.page-header__logo {
+  position: relative;
+  color: var(--color-white);
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 74px;
+    height: 23px;
+    background-color: currentColor;
+    mask-image: url("../img/icon-pink.svg");
+    mask-repeat: no-repeat;
+    transition: color 0.2s ease-in-out;
+
+    @media @tablet-desktop {
+      width: 150px;
+      height: 45px;
+      mask-image: url("../img/icon-logo-white.svg");
+    }
+
+    @media @desktop {
+      top: -25px;
+      mask-image: url("../img/icon-logo-white-desktop.svg");
+    }
+  }
+
+  &:hover {
+    color: var(--color-pink);
+
+    picture {
+      opacity: 0;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
 .page-header__wrapper {
   @media @desktop {
     position: relative;
@@ -83,6 +122,7 @@
 .page-header__button-toogle {
   margin-left: auto;
   margin-top: auto;
+  margin-bottom: 3px;
   align-self: center;
   padding: 0;
   width: 50px;

@@ -7,7 +7,6 @@
     <header class="content__header content__header--catalog">
       <h1 class="content__title">
         Фотографии
-        {# PP #}
         <br>
         пользователей
       </h1>
@@ -30,7 +29,11 @@
           Панорама дня
         </p>
 
-        <img class="photo-cards__photo photo-cards__photo--panorama" src="img/panorama-mobile.jpg" alt="Панорама гор и леса.">
+        <picture>
+          <source media="(min-width: 980px)" srcset="img/panorama-desktop.jpg, img/panorama-desktop@2x.jpg 2x">
+          <source media="(min-width: 660px)" srcset="img/panorama-tablet.jpg, img/panorama-tablet@2x.jpg 2x">
+          <img class="photo-cards__photo photo-cards__photo--panorama" src="img/panorama-mobile.jpg" srcset="img/panorama-mobile@2x.jpg 2x" alt="Панорама гор и леса.">
+        </picture>
 
         <figcaption class="photo-cards__photo-content photo-cards__photo-content--panorama">
           <blockquote class="photo-cards__quote photo-cards__quote--panorama">
@@ -75,7 +78,12 @@
           </h2>
 
           <figure class="photo-cards__block">
-            <img class="photo-cards__photo" src="img/photo-1-mobile.jpg" width="" height="" alt="Камера на триноге фоткает машину.">
+            <picture>
+              <source media="(min-width: 980px)" srcset="img/photo-1-desktop.jpg, img/photo-1-desktop@2x.jpg 2x" >
+              <source media="(min-width: 660px)" srcset="img/photo-1-tablet.jpg, img/photo-1-tablet@2x.jpg 2x">
+              <img class="photo-cards__photo" src="img/photo-1-mobile.jpg" srcset="img/photo-1-mobile@2x.jpg 2x" alt="Камера на
+              триноге фоткает машину.">
+            </picture>
             <figcaption class="photo-cards__photo-content">
               <blockquote class="photo-cards__quote">
                 <div>
@@ -119,7 +127,13 @@
           </h2>
 
           <figure class="photo-cards__block">
-            <img class="photo-cards__photo" src="img/photo-2-mobile.jpg" width="" height="" alt="Барабанная установка.">
+
+            <picture>
+              <source media="(min-width: 980px)" srcset="img/photo-2-desktop.jpg, img/photo-2-desktop@2x.jpg 2x" >
+              <source media="(min-width: 660px)" srcset="img/photo-2-tablet.jpg, img/photo-2-tablet@2x.jpg 2x">
+              <img class="photo-cards__photo" src="img/photo-2-mobile.jpg" srcset="img/photo-2-mobile@2x.jpg 2x" alt="Барабанная установка.">
+            </picture>
+
             <figcaption class="photo-cards__photo-content">
               <blockquote class="photo-cards__quote">
                 <div>
@@ -162,7 +176,13 @@
           </h2>
 
           <figure class="photo-cards__block">
-            <img class="photo-cards__photo" src="img/photo-3-mobile.jpg" width="" height="" alt="Стеклянный потолок с видом на облака.">
+
+            <picture>
+              <source media="(min-width: 980px)" srcset="img/photo-3-desktop.jpg, img/photo-3-desktop@2x.jpg 2x" >
+              <source media="(min-width: 660px)" srcset="img/photo-3-tablet.jpg, img/photo-3-tablet@2x.jpg 2x">
+              <img class="photo-cards__photo" src="img/photo-3-mobile.jpg" srcset="img/photo-3-mobile@2x.jpg 2x" alt="Стеклянный потолок с видом на облака.">
+            </picture>
+
             <figcaption class="photo-cards__photo-content">
               <blockquote class="photo-cards__quote">
 
@@ -206,7 +226,13 @@
           </h2>
 
           <figure class="photo-cards__block">
-            <img class="photo-cards__photo" src="img/photo-4-mobile.jpg" width="" height="" alt="Шатер с кубанской бахчёй.">
+
+            <picture>
+              <source media="(min-width: 980px)" srcset="img/photo-4-desktop.jpg, img/photo-4-desktop@2x.jpg 2x" >
+              <source media="(min-width: 660px)" srcset="img/photo-4-tablet.jpg, img/photo-4-tablet@2x.jpg 2x">
+              <img class="photo-cards__photo" src="img/photo-4-mobile.jpg" srcset="img/photo-4-mobile@2x.jpg 2x" alt="Шатер с кубанской бахчёй.">
+            </picture>
+
             <figcaption class="photo-cards__photo-content">
               <blockquote class="photo-cards__quote">
 
@@ -250,7 +276,13 @@
           </h2>
 
           <figure class="photo-cards__block">
-            <img class="photo-cards__photo" src="img/photo-5-mobile.jpg" width="" height="" alt="Вид с высокой горы.">
+
+            <picture>
+              <source media="(min-width: 980px)" srcset="img/photo-5-desktop.jpg, img/photo-5-desktop@2x.jpg 2x" >
+              <source media="(min-width: 660px)" srcset="img/photo-5-tablet.jpg, img/photo-5-tablet@2x.jpg 2x">
+              <img class="photo-cards__photo" src="img/photo-5-mobile.jpg" srcset="img/photo-5-mobile@2x.jpg 2x" alt="Вид с высокой горы.">
+            </picture>
+
             <figcaption class="photo-cards__photo-content">
               <blockquote class="photo-cards__quote">
 
@@ -295,7 +327,13 @@
           </h2>
 
           <figure class="photo-cards__block">
-            <img class="photo-cards__photo" src="img/photo-6-mobile.jpg" width="" height="" alt="Вид из иллюмината самолета.">
+
+            <picture>
+              <source media="(min-width: 980px)" srcset="img/photo-6-desktop.jpg, img/photo-6-desktop@2x.jpg 2x" >
+              <source media="(min-width: 660px)" srcset="img/photo-6-tablet.jpg, img/photo-6-tablet@2x.jpg 2x">
+              <img class="photo-cards__photo" src="img/photo-6-mobile.jpg" srcset="img/photo-6-mobile@2x.jpg 2x" alt="Вид из иллюмината самолета.">
+            </picture>
+
             <figcaption class="photo-cards__photo-content">
               <blockquote class="photo-cards__quote">
 
@@ -347,7 +385,7 @@
           <span class="visually-hidden">
             Запостите свою фотографию.
           </span>
-          <input class="visually-hidden" type="file" >
+          <input class="visually-hidden" type="file">
         </label>
       </p>
 
