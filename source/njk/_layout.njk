@@ -21,11 +21,17 @@
       <div class="page-header__wrapper">
         <div class="page-header__position page-header__position--js">
           <a class="logo page-header__logo" href="index.html" {{ 'aria-current="page"' if page == 'index' }}>
-            <picture>
-              <source media="(min-width: 980px)" srcset="img/icon-logo-white-desktop.svg">
-              <source media="(min-width: 660px)" srcset="img/icon-logo-white.svg">
-              <img class="logo__image-pink" src="img/icon-pink.svg" alt="Логотип Pink.">
-            </picture>
+            <svg class="logo__image-pink logo__image-pink--desktop" width="147" height="40" viewBox="0 0 147 40" xmlns="http://www.w3.org/2000/svg">
+              <use href="img/icon-logo-white-desktop.svg#logo-desktop" />
+            </svg>
+
+            <svg class="logo__image-pink logo__image-pink--tablet" width="145" height="40" viewBox="0 0 145 40" xmlns="http://www.w3.org/2000/svg">
+              <use href="img/icon-logo-white.svg#logo-tablet" />
+            </svg>
+
+            <svg class="logo__image-pink logo__image-pink--mobile" role="img" aria-label="Логотип Pink." width="74" height="23" viewBox="0 0 74 23" xmlns="http://www.w3.org/2000/svg">
+              <use href="img/logo-pink-white.svg#logo-mobile" />
+            </svg>
           </a>
 
           <button class="page-header__button-toogle js-burger-button" type="button">
@@ -70,10 +76,12 @@
 
     <footer class="page-footer page-footer--position">
       <a class="page-footer__logo" href="index.html" {{ 'aria-current="page"' if page == 'index' }}>
-        <picture>
-          <source media="(min-width: 980px)" srcset="img/logo-pink-desktop.svg">
-          <img class="page-footer__logo-pink" src="img/logo-pink.svg" alt="Логотип Pink.">
-        </picture>
+        <svg class="page-footer__logo-pink page-footer__logo-pink--desktop" width="147" height="40" viewBox="0 0 147 40" xmlns="http://www.w3.org/2000/svg">
+          <use href="img/logo-pink-desktop.svg#pink-footer" />
+        </svg>
+        <svg class="page-footer__logo-pink page-footer__logo-pink--mobile-tablet"  role="img" aria-label="Логотип Pink." width="145" height="40" viewBox="0 0 145 40" xmlns="http://www.w3.org/2000/svg">
+          <use href="img/logo-pink.svg#pink-footer-mt" />
+        </svg>
       </a>
 
       <ul class="social-list page-footer__social-list">
@@ -105,14 +113,23 @@
       <div>
         <a class="logo-dev page-footer__dev-link" href="https://htmlacademy.ru/intensive/adaptive">
           Разработано
+
+
           <p class="logo-dev__image">
-            <span class="visually-hidden">
-              Логотип HTML Academy.
-            </span>
+            <svg class="logo-dev__html-academy" role="img" aria-label="Логотип HTML Academy." width="27" height="34" viewBox="0 0 27 34" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="img/logo-html-academy.svg#logo-html">
+            </svg>
           </p>
         </a>
       </div>
     </footer>
+
+    <script>
+      window.pinegladePP = {
+        breakpoints: [320, 660, 1200],
+      };
+    </script>
+    <script src="https://efiand.github.io/pineglade-pp/pineglade-pp.min.js"></script>
 
     <script src="js/script.js"></script>
   </body>

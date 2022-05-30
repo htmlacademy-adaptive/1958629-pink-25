@@ -27,25 +27,19 @@
       <ul class="platforms-list promo__platforms-list">
         <li class="platforms-list__item">
           <a class="platforms-list__link platforms-list__link--apple" href="https://www.apple.com/ru/app-store/">
-            <span class="visually-hidden">
-              Версия для Apple.
-            </span>
+            <img src="../img/icon-apple.svg" alt="Версия для Apple.">
           </a>
         </li>
 
         <li class="platforms-list__item">
           <a class="platforms-list__link platforms-list__link--android" href="https://play.google.com">
-            <span class="visually-hidden">
-              Версия для Android.
-            </span>
+            <img src="../img/icon-android.svg" alt="Версия для Android.">
           </a>
         </li>
 
         <li class="platforms-list__item">
           <a class="platforms-list__link platforms-list__link--microsoft" href="https://www.microsoft.com/">
-            <span class="visually-hidden">
-              Версия для Microsoft.
-            </span>
+            <img src="../img/icon-microsoft.svg" alt=" Версия для Microsoft.">
           </a>
         </li>
       </ul>
@@ -126,61 +120,63 @@
       Отзывы.
     </h2>
 
-    <ul class="reviews__list">
-      <li class="reviews__item">
-        <blockquote class="reviews__quote">
-          <cite class="reviews__author">
-            Николай Петров
+    <div class="reviews__wrapper-position">
+      <ul class="reviews__list">
+        <li class="reviews__item">
+          <blockquote class="reviews__quote">
+            <cite class="reviews__author">
+              Николай Петров
 
-            <span class="reviews__author-bio">
-              25 лет, водитель трамвая
+              <span class="reviews__author-bio">
+                25 лет, водитель трамвая
+              </span>
+            </cite>
+
+            <p class="reviews__description">
+              «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+            </p>
+          </blockquote>
+        </li>
+      </ul>
+
+      <ul class="togglers reviews__togglers-list">
+        <li class="togglers__item">
+          <button class="togglers__button togglers__button--current" type="button">
+            <span class="visually-hidden">
+              К отзыву 1.
             </span>
-          </cite>
+          </button>
+        </li>
 
-          <p class="reviews__description">
-            «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
-          </p>
-        </blockquote>
-      </li>
-    </ul>
+        <li class="togglers__item">
+          <button class="togglers__button" type="button">
+            <span class="visually-hidden">
+              К отзыву 2.
+            </span>
+          </button>
+        </li>
 
-    <ul class="togglers reviews__togglers-list">
-      <li class="togglers__item">
-        <button class="togglers__button togglers__button--current" type="button">
-          <span class="visually-hidden">
-            К отзыву 1.
-          </span>
-        </button>
-      </li>
+        <li class="togglers__item">
+          <button class="togglers__button" type="button">
+            <span class="visually-hidden">
+              К отзыву 3.
+            </span>
+          </button>
+        </li>
+      </ul>
 
-      <li class="togglers__item">
-        <button class="togglers__button" type="button">
-          <span class="visually-hidden">
-            К отзыву 2.
-          </span>
-        </button>
-      </li>
+      <button class="reviews__button-arrow reviews__button-arrow--left" type="button">
+        <span class="visually-hidden">
+          Открыть предыдущий отзыв.
+        </span>
+      </button>
 
-      <li class="togglers__item">
-        <button class="togglers__button" type="button">
-          <span class="visually-hidden">
-            К отзыву 3.
-          </span>
-        </button>
-      </li>
-    </ul>
-
-    <button class="reviews__button-arrow reviews__button-arrow--left" type="button">
-      <span class="visually-hidden">
-        Открыть предыдущий отзыв.
-      </span>
-    </button>
-
-    <button class="reviews__button-arrow reviews__button-arrow--right" type="button">
-      <span class="visually-hidden">
-        Открыть следующий отзыв.
-      </span>
-    </button>
+      <button class="reviews__button-arrow reviews__button-arrow--right" type="button">
+        <span class="visually-hidden">
+          Открыть следующий отзыв.
+        </span>
+      </button>
+    </div>
   </section>
 
   <section class="tariffs page-main__tariffs">
@@ -426,6 +422,7 @@
     </dl>
 
     <p class="contacts__map">
+      <iframe class="contacts__google-map" title="Наше расположение." src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.608807798046!2d30.322392939146745!3d59.938633179301256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1653667598487!5m2!1sru!2sru" width="0" height="0" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       <span class="visually-hidden">
         Наше расположение на карте.
       </span>

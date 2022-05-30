@@ -1,5 +1,5 @@
 .contacts {
-  padding: 40px 20px 20px;
+  padding: 40px 20px 35px;
 
   @media @tablet-desktop {
     padding-top: 43px;
@@ -36,10 +36,6 @@
 
 .contacts__wrapper {
   &:last-child {
-    @media @mobile {
-      padding-top: 4px; // PP
-    }
-
     &:nth-child(odd) {
       @media @tablet {
         grid-column: 1 / -1;
@@ -70,8 +66,8 @@
 
 .contacts__map {
   position: relative;
-  margin: 8px -20px 0;
-  height: 232px;
+  margin: 37px -20px 0;
+  height: 198px;
   background-position: 50% 50%;
   background-image: url("../img/map.jpg");
   background-repeat: no-repeat;
@@ -93,7 +89,7 @@
     content: "";
     position: absolute;
     display: block;
-    top: 16px;
+    top: -1px;
     right: 0;
     left: 0;
     z-index: 5;
@@ -102,13 +98,11 @@
     clip-path: polygon(0 0, 50% 100%, 100% 0);
 
     @media @tablet {
-      top: -1px;
       height: 18.5%;
       background-size: cover;
     }
 
     @media @desktop {
-      top: -1px;
       height: 20.5%;
       background-size: cover;
     }
@@ -131,4 +125,22 @@
       background-image: url("../img/map-desktop@2x.jpg");
     }
   }
+}
+
+.contacts__google-map {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: none;
+  background-size: contain;
+  zoom: 14;
+
+  // @media @tablet {
+  //   width: 660px;
+  // }
+
+  // @media @desktop {
+  //   width: 100%;
+  // }
 }

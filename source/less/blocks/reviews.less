@@ -10,13 +10,14 @@
   padding: 0 20px;
 
   @media @desktop {
+    position: relative;
     margin: 0 auto;
     width: 734px;
     padding: 185px 20px 20px;
-    background-image: url("../img/icon-comma.svg");
-    background-size: 79px 63px;
+    background-image: url("../img/sprite.svg#icon-comma");
+    background-size: 79px 88px;
     background-repeat: no-repeat;
-    background-position: 50% 20%;
+    background-position: 50% 18%;
   }
 }
 
@@ -79,6 +80,14 @@
   }
 }
 
+.reviews__wrapper-position {
+  @media @desktop {
+    position: relative;
+    width: 940px;
+    margin: 0 auto;
+  }
+}
+
 .reviews__togglers-list {
   padding-bottom: 33px;
 
@@ -107,15 +116,15 @@
 
   &--right {
     @media @desktop {
-      right: 9%;
       top: 50%;
+      right: -12px;
     }
   }
 
   &--left {
     @media @desktop {
       top: 50%;
-      left: 11%;
+      left: -7px;
     }
   }
 
@@ -136,13 +145,13 @@
 
   &--left::before {
     @media @desktop {
-      mask-image: url("../img/icon-left-arrow.svg");
+      mask-image: url("../img/sprite.svg#icon-left-arrow");
     }
   }
 
   &--right::before {
     @media @desktop {
-      mask-image: url("../img/icon-right-arrow.svg");
+      mask-image: url("../img/sprite.svg#icon-right-arrow");
     }
   }
 

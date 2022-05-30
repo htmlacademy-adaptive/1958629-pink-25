@@ -27,7 +27,7 @@
             Фамилия:
           </label>
 
-          <input class="fields__input" id="last_name" type="text" name="name[]" placeholder="Укажите фамилию *">
+          <input class="fields__input" id="last_name" type="text" name="last_name" placeholder="Укажите фамилию *">
         </p>
 
         <p class="fields__group fields__group--fio">
@@ -35,7 +35,7 @@
             Имя:
           </label>
 
-          <input class="fields__input" id="first_name" type="text" name="name[]" placeholder="Введите ваше имя *">
+          <input class="fields__input" id="first_name" type="text" name="first_name" placeholder="Введите ваше имя *">
         </p>
 
         <p class="fields__group fields__group--fio">
@@ -43,7 +43,7 @@
             Отчество:
           </label>
 
-          <input class="fields__input" id="middle_name" type="text" name="name[]" placeholder="Ну и отчество тоже">
+          <input class="fields__input" id="middle_name" type="text" name="middle_name" placeholder="Ну и отчество тоже">
         </p>
       </fieldset>
 
@@ -57,42 +57,42 @@
         <ul class="checker checkboxes__list">
           <li class="checkboxes__group checker__group">
             <label class="checkboxes__label">
-              <input class="checkboxes__input checkboxes__input--checkbox" type="checkbox" name="event[]" checked>
+              <input class="checkboxes__input checkboxes__input--checkbox" type="checkbox" name="event[]" value="selfie" checked>
               Сделал селфи с акулой
             </label>
           </li>
 
           <li class="checkboxes__group checker__group">
             <label class="checkboxes__label">
-              <input class="checkboxes__input checkboxes__input--checkbox" type="checkbox" name="event[]" checked>
+              <input class="checkboxes__input checkboxes__input--checkbox" type="checkbox" name="event[]" value="burned" checked>
               Обгорел на пляже
             </label>
           </li>
 
           <li class="checkboxes__group checker__group">
             <label class="checkboxes__label">
-              <input class="checkboxes__input checkboxes__input--checkbox" type="checkbox" name="event[]">
+              <input class="checkboxes__input checkboxes__input--checkbox" type="checkbox" name="event[]" value="see-norris">
               Видел Чака Норриса
             </label>
           </li>
 
           <li class="checkboxes__group checker__group">
             <label class="checkboxes__label">
-              <input class="checkboxes__input checkboxes__input--checkbox" type="checkbox" name="event[]">
+              <input class="checkboxes__input checkboxes__input--checkbox" type="checkbox" name="event[]" value="souvenirs">
               Накупил сувениров
             </label>
           </li>
 
           <li class="checkboxes__group checker__group">
             <label class="checkboxes__label">
-              <input class="checkboxes__input checkboxes__input--checkbox" type="checkbox" name="event[]" checked>
+              <input class="checkboxes__input checkboxes__input--checkbox" type="checkbox" name="event[]" value="tower" checked>
               Удержал башню
             </label>
           </li>
 
           <li class="checkboxes__group checker__group">
             <label class="checkboxes__label">
-              <input class="checkboxes__input checkboxes__input--checkbox" type="checkbox" name="event[]">
+              <input class="checkboxes__input checkboxes__input--checkbox" type="checkbox" name="event[]" value="hotel">
               Разгромил отель
             </label>
           </li>
@@ -129,21 +129,21 @@
         <ul class="checkboxes__list checkboxes__list--position">
           <li class="checkboxes__group">
             <label class="checkboxes__label">
-              <input class="checkboxes__input checkboxes__input--radio" type="radio" name="platform" checked>
+              <input class="checkboxes__input checkboxes__input--radio" type="radio" name="platform" value="apple" checked>
               Pink для IOS
             </label>
           </li>
 
           <li class="checkboxes__group">
             <label class="checkboxes__label">
-              <input class="checkboxes__input checkboxes__input--radio" type="radio" name="platform">
+              <input class="checkboxes__input checkboxes__input--radio" type="radio" name="platform" value="android">
               Pink на Android
             </label>
           </li>
 
           <li class="checkboxes__group">
             <label class="checkboxes__label">
-              <input class="checkboxes__input checkboxes__input--radio" type="radio" name="platform">
+              <input class="checkboxes__input checkboxes__input--radio" type="radio" name="platform" value="windows">
               Windows Phone
             </label>
           </li>
@@ -173,7 +173,7 @@
   <div class="modal">
     <div class="modal__block page-main__modal">
 
-      <div class="modal__text-wrapper">
+      <div class="modal__text-wrapper modal__text-wrapper--position">
         <h2 class="modal__title">
           Что-то пошло не так!
         </h2>
@@ -183,8 +183,8 @@
         </p>
       </div>
 
-      <div class="modal__button-wrapper">
-        <button class="button modal__button" type="button">
+      <div class="modal__button-wrapper modal__button-wrapper--position">
+        <button class="button modal__button modal__button--small" type="button">
           Ок
         </button>
       </div>
@@ -200,11 +200,11 @@
         </h2>
 
         <p class="modal__response">
-          Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.
+          Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим&nbsp;вас.
         </p>
       </div>
 
-      <div class="modal__button-wrapper">
+      <div class="modal__button-wrapper modal__button-wrapper--bg-color">
         <button class="button modal__button" type="button">
           Закрыть окно
         </button>

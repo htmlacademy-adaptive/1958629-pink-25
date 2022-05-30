@@ -1,6 +1,7 @@
 .announce {
   padding: 54px 20px 123px 330px;
-  background-image: url("../img/icon-time-24.svg");
+  background-image: url("../img/sprite.svg#icon-time-24");
+  background-size: 238px;
   background-position: 20px 13px;
   background-repeat: no-repeat;
 
@@ -62,5 +63,13 @@
   @media @desktop {
     font-size: 18px;
     line-height: 30px;
+  }
+
+  &:hover {
+    color: var(--color-asphalt);
+  }
+
+  &:active {
+    color: var(--color-asphalt-30);
   }
 }
