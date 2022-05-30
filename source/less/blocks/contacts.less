@@ -69,20 +69,72 @@
   margin: 37px -20px 0;
   height: 198px;
   background-position: 50% 50%;
-  background-image: url("../img/map.jpg");
   background-repeat: no-repeat;
 
+  @supports (background-image: url("../img/map.webp")) {
+    background-image: url("../img/map.webp");
+  }
+
+  @supports not (background-image: url("../img/map.webp")) {
+    background-image: url("../img/map.jpg");
+  }
+
   @media @retina {
-    background-image: url("../img/map@2x.jpg");
     background-size: 100% auto;
+
+    @supports (background-image: url("../img/map@2x.webp")) {
+      background-image: url("../img/map@2x.webp");
+    }
+
+    @supports not (background-image: url("../img/map@2x.webp")) {
+      background-image: url("../img/map@2x.jpg");
+    }
   }
 
   @media @tablet {
     margin-top: 2px;
+    height: 374px;
+
+    @supports (background-image: url("../img/map-tablet.webp")) {
+      background-image: url("../img/map-tablet.webp");
+    }
+
+    @supports not (background-image: url("../img/map-tablet.webp")) {
+      background-image: url("../img/map-tablet.jpg");
+    }
+
+    @media @retina {
+      @supports (background-image: url("../img/map-tablet@2x.webp")) {
+        background-image: url("../img/map-tablet@2x.webp");
+      }
+
+      @supports not (background-image: url("../img/map-tablet@2x.webp")) {
+        background-image: url("../img/map-tablet@2x.jpg");
+      }
+    }
   }
 
   @media @desktop {
     margin: 3px -20px -4px;
+    height: 500px;
+
+    @supports (background-image: url("../img/map-desktop.webp")) {
+      background-image: url("../img/map-desktop.webp");
+    }
+
+    @supports not (background-image: url("../img/map-desktop.webp")) {
+      background-image: url("../img/map-desktop.jpg");
+    }
+
+    @media @retina {
+      @supports (background-image: url("../img/map-desktop@2x.webp")) {
+        background-image: url("../img/map-desktop@2x.webp");
+      }
+
+      @supports not (background-image: url("../img/map-desktop@2x.webp")) {
+        background-image: url("../img/map-desktop@2x.jpg");
+      }
+    }
   }
 
   &::before {
@@ -105,24 +157,6 @@
     @media @desktop {
       height: 20.5%;
       background-size: cover;
-    }
-  }
-
-  @media @tablet {
-    height: 374px;
-    background-image: url("../img/map-tablet.jpg");
-
-    @media @retina {
-      background-image: url("../img/map-tablet@2x.jpg");
-    }
-  }
-
-  @media @desktop {
-    height: 500px;
-    background-image: url("../img/map-desktop.jpg");
-
-    @media @retina {
-      background-image: url("../img/map-desktop@2x.jpg");
     }
   }
 }
