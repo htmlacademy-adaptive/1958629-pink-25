@@ -3,6 +3,7 @@
   background-color: var(--color-asphalt-dark);
   color: var(--color-white);
 
+
   @media @tablet-desktop {
     position: relative;
     padding: 179px 20px 114px;
@@ -17,9 +18,11 @@
   }
 
   @media @desktop {
-    background-image: url("../img/back-desktop.jpg");
     padding: 186px 0 125px;
     margin-top: -141px;
+    background-image: url("../img/back-desktop.jpg");
+    background-position: 0 31px;
+    background-repeat: no-repeat;
 
     @media @retina {
       background-image: url("../img/back-desktop@2x.jpg");
@@ -131,7 +134,7 @@
   font-weight: 700;
   text-decoration: none;
   color: var(--color-white);
-  transition: color, 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
 
   @media @tablet-desktop {
     position: relative;
