@@ -2,31 +2,71 @@
   padding: 94px 20px 45px;
   margin-top: -66px;
   background-color: var(--color-asphalt);
-  background-image: url("../img/back-mobile-form.jpg");
   background-size: cover;
 
+  @supports (background-image: url("../img/back-mobile-form.webp")) {
+    background-image: url("../img/back-mobile-form.webp");
+  }
+
+  @supports not (background-image: url("../img/back-mobile-form.webp")) {
+    background-image: url("../img/back-mobile-form.jpg");
+  }
+
   @media @retina {
-    background-image: url("../img/back-mobile-form@2x.jpg");
     background-size: 100% auto;
+
+    @supports (background-image: url("../img/back-mobile-form@2x.webp")) {
+      background-image: url("../img/back-mobile-form@2x.webp");
+    }
+
+    @supports not (background-image: url("../img/back-mobile-form@2x.webp")) {
+      background-image: url("../img/back-mobile-form@2x.jpg");
+    }
   }
 
   @media @tablet {
-    background-image: url("../img/back-tablet-form.jpg");
     padding-bottom: 59px;
     margin-top: -110px;
 
+    @supports (background-image: url("../img/back-tablet-form.webp")) {
+      background-image: url("../img/back-tablet-form.webp");
+    }
+
+    @supports not (background-image: url("../img/back-tablet-form.webp")) {
+      background-image: url("../img/back-tablet-form.jpg");
+    }
+
     @media @retina {
-      background-image: url("../img/back-tablet-form@2x.jpg");
+      @supports (background-image: url("../img/back-tablet-form@2x.webp")) {
+        background-image: url("../img/back-tablet-form@2x.webp");
+      }
+
+      @supports not (background-image: url("../img/back-tablet-form@2x.webp")) {
+        background-image: url("../img/back-tablet-form@2x.jpg");
+      }
     }
   }
 
   @media @desktop {
-    background-image: url("../img/back-desktop-form.jpg");
     padding-bottom: 89px;
     margin-top: -110px;
 
+    @supports (background-image: url("../img/back-desktop-form.webp")) {
+      background-image: url("../img/back-desktop-form.webp");
+    }
+
+    @supports not (background-image: url("../img/back-desktop-form.webp")) {
+      background-image: url("../img/back-desktop-form.jpg");
+    }
+
     @media @retina {
-      background-image: url("../img/back-desktop-form@2x.jpg");
+      @supports (background-image: url("../img/back-desktop-form@2x.webp")) {
+        background-image: url("../img/back-desktop-form@2x.webp");
+      }
+
+      @supports not (background-image: url("../img/back-desktop-form@2x.webp")) {
+        background-image: url("../img/back-desktop-form@2x.jpg");
+      }
     }
   }
 
@@ -75,6 +115,8 @@
   }
 
   @media @desktop {
+    max-width: 780px;
+    margin: 0 auto;
     padding: 75px 50px 0;
   }
 }
@@ -98,6 +140,7 @@
   }
 
   @media @desktop {
+    max-width: 780px;
     margin: 0 auto;
     padding: 91px 200px 37px;
   }

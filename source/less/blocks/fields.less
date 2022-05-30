@@ -83,19 +83,20 @@
       background-color: var(--color-grey);
       background-position: 50% 50%;
       background-repeat: no-repeat;
+      background-size: 20px;
       border-radius: 0 3px 3px 0;
     }
   }
 
   &--phone::after {
     @media @tablet-desktop {
-      background-image: url("../img/icon-phone.svg");
+      background-image: url("../img/sprite.svg#icon-phone");
     }
   }
 
   &--email::after {
     @media @tablet-desktop {
-      background-image: url("../img/icon-email.svg");
+      background-image: url("../img/sprite.svg#icon-email");
     }
   }
 
@@ -157,12 +158,12 @@
     margin: 0;
   }
 
-  &:hover,
-  &:focus-visible {
+  &:hover {
     border-color: var(--color-asphalt);
   }
 
-  &:active {
+  &:active,
+  &:focus-visible {
     border-color: var(--color-pink);
   }
 }

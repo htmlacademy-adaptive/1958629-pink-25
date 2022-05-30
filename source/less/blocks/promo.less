@@ -3,26 +3,55 @@
   background-color: var(--color-asphalt-dark);
   color: var(--color-white);
 
+
   @media @tablet-desktop {
     position: relative;
     padding: 179px 20px 114px;
     margin-top: -110px;
-    background-image: url("../img/back-tablet.jpg");
     background-size: cover;
 
+    @supports (background-image: url("../img/back-tablet.webp")) {
+      background-image: url("../img/back-tablet.webp");
+    }
+
+    @supports not (background-image: url("../img/back-tablet.webp")) {
+      background-image: url("../img/back-tablet.jpg");
+    }
+
     @media @retina {
-      background-image: url("../img/back-tablet@2x.jpg");
-      background-size: 100% auto;
+      @supports (background-image: url("../img/back-tablet@2x.webp")) {
+        background-image: url("../img/back-tablet@2x.webp");
+      }
+
+      @supports not (background-image: url("../img/back-tablet@2x.webp")) {
+        background-image: url("../img/back-tablet@2x.jpg");
+      }
     }
   }
 
   @media @desktop {
-    background-image: url("../img/back-desktop.jpg");
-    padding: 186px 131px 125px;
+    padding: 186px 0 125px;
+    margin-top: -141px;
+    background-position: 0 31px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    @supports (background-image: url("../img/back-desktop.webp")) {
+      background-image: url("../img/back-desktop.webp");
+    }
+
+    @supports not (background-image: url("../img/back-desktop.webp")) {
+      background-image: url("../img/back-desktop.jpg");
+    }
 
     @media @retina {
-      background-image: url("../img/back-desktop@2x.jpg");
-      background-size: 100% auto;
+      @supports (background-image: url("../img/back-desktop@2x.webp")) {
+        background-image: url("../img/back-desktop@2x.webp");
+      }
+
+      @supports not (background-image: url("../img/back-desktop@2x.webp")) {
+        background-image: url("../img/back-desktop@2x.jpg");
+      }
     }
   }
 }
@@ -33,6 +62,10 @@
 
   @media @desktop {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
   }
 }
 
@@ -47,17 +80,30 @@
 
   @media @desktop {
     margin-bottom: 32px;
+    margin-left: 22px;
   }
 }
 
 .promo__bg-block {
-  background-image: url("../img/back-mobile.jpg");
   background-size: cover;
   margin: -65px -20px 28px;
 
+  @supports (background-image: url("../img/back-mobile.webp")) {
+    background-image: url("../img/back-mobile.webp");
+  }
+
+  @supports not (background-image: url("../img/back-mobile.webp")) {
+    background-image: url("../img/back-mobile.jpg");
+  }
+
   @media @retina {
-    background-image: url("../img/back-mobile@2x.jpg");
-    background-size: 100% auto;
+    @supports (background-image: url("../img/back-mobile@2x.webp")) {
+      background-image: url("../img/back-mobile@2x.webp");
+    }
+
+    @supports not (background-image: url("../img/back-mobile@2x.webp")) {
+      background-image: url("../img/back-mobile@2x.jpg");
+    }
   }
 
   @media @tablet-desktop {
@@ -69,10 +115,15 @@
 .promo__lead {
   display: block;
   text-align: center;
-  padding: 89px 20px 29px;
+  padding: 89px 40px 29px;
   font-size: 24px;
   line-height: 29px;
   font-weight: 300;
+
+  @media @tablet {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 
   @media @tablet-desktop {
     width: 300px;
@@ -82,9 +133,10 @@
   }
 
   @media @desktop {
+    padding-top: 119px;
     font-size: 50px;
     line-height: 68px;
-    margin-bottom: 35px;
+    margin-bottom: 5px;
   }
 }
 
@@ -101,7 +153,7 @@
   }
 
   @media @desktop {
-    right: 14px;
+    right: 33px;
     width: 780px;
     bottom: -125px;
   }
@@ -109,7 +161,7 @@
 
 .promo__button-download {
   display: block;
-  padding: 15px 20px;
+  padding: 15px 20px 16px;
   margin: 0 0 32px;
   border: 3px solid var(--color-white);
   border-radius: 29px;
@@ -119,7 +171,7 @@
   font-weight: 700;
   text-decoration: none;
   color: var(--color-white);
-  transition: color, 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
 
   @media @tablet-desktop {
     position: relative;
@@ -132,6 +184,7 @@
     font-size: 21px;
     padding: 15px 28px;
     margin-bottom: 68px;
+    margin-left: 21px;
   }
 
   &:hover {
@@ -157,5 +210,9 @@
     width: 300px;
     font-size: 18px;
     line-height: 24px;
+  }
+
+  @media @desktop {
+    margin-left: 21px;
   }
 }

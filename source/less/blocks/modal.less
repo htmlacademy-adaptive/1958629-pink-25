@@ -7,6 +7,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
+  z-index: 6;
 
   &--opened {
     display: flex;
@@ -31,15 +32,25 @@
 }
 
 .modal__title {
-  margin: 0 0 37px 0;
+  margin: 0 0 37px;
   padding: 0;
   font-size: 18px;
   line-height: 24px;
   color: var(--color-black);
 
+  @media @mobile {
+    margin-bottom: 25px;
+  }
+
   @media @tablet-desktop {
+    padding: 0 35px;
+    margin-bottom: 21px;
     font-size: 30px;
     line-height: 40px;
+  }
+
+  @media @desktop {
+    padding: 0;
   }
 }
 
@@ -52,38 +63,70 @@
   @media @tablet-desktop {
     font-size: 18px;
   }
+
+  @media @desktop {
+    padding: 0 25px;
+  }
 }
 
 .modal__text-wrapper {
   width: 100%;
-  padding: 44px 20px 50px;
+  padding: 44px 20px 35px;
   box-sizing: border-box;
 
+
   @media @tablet-desktop {
-    padding: 49px 70px 35px;
+    padding: 39px 70px 30px;
   }
 
   @media @desktop {
-    padding: 49px 162px;
+    padding: 43px 162px 40px;
+  }
+
+  &--position {
+    @media @mobile {
+      padding-top: 36px;
+    }
+
+    @media @desktop {
+      padding-bottom: 64px;
+    }
   }
 }
 
 .modal__button {
   display: block;
   width: 100%;
+
+  &--small {
+    @media @desktop {
+      width: 66%;
+      margin: 0 auto;
+    }
+  }
 }
 
 .modal__button-wrapper {
   width: 100%;
   box-sizing: border-box;
-  padding: 0 20px 52px;
+  padding: 49px 20px;
+
+  &--bg-color {
+    background-color: var(--color-lightgrey);
+  }
+
+  &--position {
+    @media @mobile {
+      padding: 9px 20px 48px;
+    }
+  }
 
   @media @tablet-desktop {
-    padding: 49px 82px 52px;
-    background-color: var(--color-lightgrey);
+    padding: 2px 82px 52px;
   }
 
   @media @desktop {
     padding: 52px 162px;
+    background-color: var(--color-lightgrey);
   }
 }

@@ -36,13 +36,26 @@
   margin: 0 0 25px;
   padding: 0;
   height: 374px;
-  background-image: url("../img/photo-7-mobile.jpg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: contain;
 
+  @supports (background-image: url("../img/photo-7-mobile.webp")) {
+    background-image: url("../img/photo-7-mobile.webp");
+  }
+
+  @supports not (background-image: url("../img/photo-7-mobile.webp")) {
+    background-image: url("../img/photo-7-mobile.jpg");
+  }
+
   @media @retina {
-    background-image: url("../img/photo-7-mobile@2x.jpg");
+    @supports (background-image: url("../img/photo-7-mobile@2x.webp")) {
+      background-image: url("../img/photo-7-mobile@2x.webp");
+    }
+
+    @supports not (background-image: url("../img/photo-7-mobile@2x.webp")) {
+      background-image: url("../img/photo-7-mobile@2x.jpg");
+    }
   }
 
   @media @tablet-desktop {
@@ -50,10 +63,23 @@
     min-width: 300px;
     height: 400px;
     margin-right: 30px;
-    background-image: url("../img/photo-7-tablet-desktop.jpg");
+
+    @supports (background-image: url("../img/photo-7-tablet-desktop.webp")) {
+      background-image: url("../img/photo-7-tablet-desktop.webp");
+    }
+
+    @supports not (background-image: url("../img/photo-7-tablet-desktop.webp")) {
+      background-image: url("../img/photo-7-tablet-desktop.jpg");
+    }
 
     @media @retina {
-      background-image: url("../img/photo-7-tablet-desktop@2x.jpg");
+      @supports (background-image: url("../img/photo-7-tablet-desktop@2x.webp")) {
+        background-image: url("../img/photo-7-tablet-desktop@2x.webp");
+      }
+
+      @supports not (background-image: url("../img/photo-7-tablet-desktop@2x.webp")) {
+        background-image: url("../img/photo-7-tablet-desktop@2x.jpg");
+      }
     }
   }
 
@@ -178,18 +204,18 @@
 }
 
 .form-post__button-control--cut::before {
-  mask-image: url("../img/icon-crop.svg");
+  mask-image: url("../img/sprite.svg#icon-crop");
 }
 
 .form-post__button-control--shade {
   &::before {
-    mask-image: url("../img/icon-fill.svg");
+    mask-image: url("../img/sprite.svg#icon-fill");
   }
 }
 
 .form-post__button-control--contrast {
   &::before {
-    mask-image: url("../img/icon-contrast.svg");
+    mask-image: url("../img/sprite.svg#icon-contrast");
   }
 }
 
